@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+ul.nav {
+	list-style-type: none;
+	
+	padding: 0;
+	margin: 0;
+}
+
+ul.nav > li {
+	float: left;
+
+	background: #ffffff;
+
+	line-height: 40px;
+
+	border-right: 1px solid #D5D5D5;
+	
+	position: relative;
+}
+
+ul.nav > li > a {
+	color: #000;
+	
+	text-decoration: none;
+	
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "굴림";
+	
+	padding: 10px 15px;
+	
+	margin: 0 3px;
+}
+
+ul.nav > li > a:hover {
+	background: #0054FF;
+	color: #fff;
+}
+
+ul.nav > li > ul {
+	position: absolute;
+	
+	list-style-type: none;
+	
+	padding: 0;
+	margin: 0;
+
+	width: 200px;
+
+}
+
+ul.nav > li > ul > li {
+	background: #fff;
+
+	padding-left: 20px;
+
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+ul.nav > li:hover > ul > li {
+	height: 40px;
+	font-size: 20px;
+	line-height: 40px;
+}
+
+ul.nav > li > ul > li > a {
+
+	background: #fff;
+
+	color: #000;
+	
+	text-decoration: none;
+	
+	display: block;
+}
+
+ul.nav > li > ul > li > a:hover {
+	font-weight: bold;
+}
+
+</style>
+
+</head>
+<body>
+
+<ul class="nav">
+	<li>
+		<a href="#">학원소개</a>
+		<ul>
+			<li><a href="#">원장 인사말</a></li>
+			<li><a href="#">학원 전경</a></li>
+			<li><a href="#">학원 위치</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="#">수강안내</a>
+		<ul>
+			<li><a href="#">교육 준비물</a></li>
+			<li><a href="#">수강료</a></li>
+			<li><a href="#">교육시간</a></li>
+			<li><a href="#">응시절차</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="#">면허시험안내</a>
+		<ul>
+			<li><a href="#">면허취득절차</a></li>
+			<li><a href="#">학과시험</a></li>
+			<li><a href="#">기능시험</a></li>
+			<li><a href="#">주행시험</a></li>
+		</ul>
+	</li>
+	
+	<li>
+		<a href="#">도로주행시험코스</a>
+		<ul>
+			<li><a href="#">도로주행시험코스</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="#">온라인 문의</a>
+		<ul>
+			<li><a href="#">온라인 문의</a></li>
+			<li><a href="#">셔틀버스안내</a></li>
+		</ul>
+	</li>
+	
+	<li>
+		<a href="#">고객센터</a>
+		<ul>
+			<li><a href="#">공지사항</a></li>
+			<li><a href="#">자료실</a></li>
+			<li><a href="#">포토 갤러리</a></li>
+		</ul>
+	</li>
+</ul>
+
+</body>
+</html>
