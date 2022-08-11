@@ -19,22 +19,42 @@ a {
 	text-decoration: none;
 }
 
+#MenuInline {
+	background: #fff;
+	
+	width: 100%;
+	
+	border-top: 0.5px solid #bbb;
+	border-bottom: 0.5px solid #bbb;
+	box-sizing: border-box;
+}
+
+#MenuInline > div:hover {
+	margin-bottom: 180px;
+}
+
+
 #menu {
+
 	font-size: 15px;
 	font-weight: bold;
 	
-	width: 1280px;
+	width: 1150px;
 	height: 50px;
 	line-height: 50px;
 	margin: 0 auto;
 	
 	text-align: center;
-	
 	white-space : nowrap;
+	
 }
 
 #menu:hover > ul > li > ul {
 	display: block;
+}
+
+#menu:hover > ul > li > ul > li {
+	height: 45px;
 }
 
 .menubg {
@@ -43,16 +63,19 @@ a {
 
 #menu > ul > li {
 	float: left;
-	width: 16.66666666666667%;
+	width: 15.66666666666667%;
 	position: relative;
 	
-	border: 0.5px solid #bbb;
 	
+	border-left: 0.5px solid #bbb;
+	border-right: 0.5px solid #bbb;
+	
+	border-collapse: collapse;
  	box-sizing: border-box;
  	
 }
 #menu > ul > li:hover {
-	background: blue;
+	background: skyblue;
 }
 
 #menu > ul > li:hover > a {
@@ -65,37 +88,51 @@ a {
 }
 
 /* 서브메뉴 설정 */
-#menu > ul > li > ul {
-	width: 213.3333333px;
 
+#menu > ul > li > ul {
+	width: 180.16px;
+	
 	display: none;
 	position: absolute;
 	
-	font-size: 12px;
-	background: skyblue;
+	font-size: 13px;
+	background: #fff;
 }
 
 #menu > ul > li:hover > ul {
 	display: block;
 }
 
+header {
+ 	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+body {
+	padding-top: 52px;
+}
+
 /* -------------------------------- 이미지 슬라이드css ------------------------------- */
 
 /* 사이즈 조절 */
-#slideImg {
-	width: 2000px;
-	height: 630px;
-/* 	overflow: hidden; */
+.slide > li {
+	width: 1920px;
+	height: 600px;
+	
+	overflow: hidden;
+	
+	display:flex;
+    align-items:center;
+    
+    position: absolute;
+    
+    z-index: -1;
 }
-
-.slide {
-	width: 100%;
-	height: 100%;
-}
-
-
 
 /* 슬라이드 추가 */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -112,80 +149,88 @@ li {
 <!------------------------------------ 메뉴 html ----------------------------------------->
 <body>
 
-<div id="menu">
-<ul>
-	<li>
-		<a href="https://www.naver.com/">학원소개</a>
-		<ul>
-			<li><a href="#">원장 인사말</a></li>
-			<li><a href="#">학원 전경</a></li>
-			<li><a href="#">학원 위치</a></li>
-			<li></li>
-		</ul>
-	</li>
+<header>
+<div id="MenuInline">
+	<div id="menu">
+	<ul>
+		<li>
+			<a href="https://www.naver.com/">학원소개</a>
+			<ul>
+				<li><a href="#">원장 인사말</a></li>
+				<li><a href="#">학원 전경</a></li>
+				<li><a href="#">학원 위치</a></li>
+				<li></li>
+			</ul>
+		</li>
+		
+		<li>
+			<a href="#">수강안내</a>
+			<ul>
+				<li><a href="#">교육 준비물</a></li>
+				<li><a href="#">수강료</a></li>
+				<li><a href="#">교육시간</a></li>
+				<li><a href="#">응시절차</a></li>
+			</ul>
+		</li>
+		
+		<li>
+			<a href="#">면허시험안내</a>
+			<ul>
+				<li><a href="#">면허취득절차</a></li>
+				<li><a href="#">학과시험</a></li>
+				<li><a href="#">기능시험</a></li>
+				<li><a href="#">주행시험</a></li>
+			</ul>
+		</li>
 	
-	<li>
-		<a href="#">수강안내</a>
-		<ul>
-			<li><a href="#">교육 준비물</a></li>
-			<li><a href="#">수강료</a></li>
-			<li><a href="#">교육시간</a></li>
-			<li><a href="#">응시절차</a></li>
-		</ul>
-	</li>
+		<li>
+			<a href="#">도로주행시험코스</a>
+			<ul>
+				<li><a href="#">도로주행시험코스</a></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</li>
 	
-	<li>
-		<a href="#">면허시험안내</a>
-		<ul>
-			<li><a href="#">면허취득절차</a></li>
-			<li><a href="#">학과시험</a></li>
-			<li><a href="#">기능시험</a></li>
-			<li><a href="#">주행시험</a></li>
-		</ul>
-	</li>
-	
-	<li>
-		<a href="#">도로주행시험코스</a>
-		<ul>
-			<li><a href="#">도로주행시험코스</a></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</li>
-	
-	<li>
-		<a href="#">온라인 문의</a>
-		<ul>
-			<li><a href="#">온라인 문의</a></li>
-			<li><a href="#">셔틀버스안내</a></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</li>
- 	<li>
- 		<a href="#">고객센터</a>
- 		<ul>
- 			<li><a href="#">공지사항</a></li>
- 			<li><a href="#">자료실</a></li>
- 			<li><a href="#">포토 갤러리</a></li>
- 			<li><p></p></li>
- 		</ul>
- 	</li>
-</ul>
+		<li>
+			<a href="#">온라인 문의</a>
+			<ul>
+				<li><a href="#">온라인 문의</a></li>
+				<li><a href="#">셔틀버스안내</a></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</li>
+ 		<li>
+ 			<a href="#">고객센터</a>
+ 			<ul>
+ 				<li><a href="#">공지사항</a></li>
+ 				<li><a href="#">자료실</a></li>
+ 				<li><a href="#">포토 갤러리</a></li>
+ 				<li><p></p></li>
+ 			</ul>
+ 		</li>
+	</ul>
+	</div>
 </div>
+</header>
 
 <!------------------------------- 이미지 슬라이드 html -------------------------------->
 <div id="slideImg">
 	<ul class="slide">
-		<li><img class="slide" src="images/lotation01.jpg" width="2000" height="630"></li>
-		<li><img class="slide" src="images/lotation02.jpg" width="2000" height="630"></li>
-		<li><img class="slide" src="images/lotation03.jpg" width="2000" height="630"></li>
-		<li><img class="slide" src="images/lotation04.jpg" width="2000" height="630"></li>
-		<li><img class="slide" src="images/lotation05.jpg" width="2000" height="1125"></li>
-		<li><img class="slide" src="images/lotation06.jpg" width="2000" height="1125"></li>
+		<li><img src="images/lotation01.jpg"></li>
+		<li><img src="images/lotation02.jpg"></li>
+		<li><img src="images/lotation03.jpg"></li>
+		<li><img src="images/lotation04.jpg"></li>
+		<li><img src="images/lotation05.jpg"></li>
+		<li><img src="images/lotation06.jpg"></li>
 	</ul>
 </div>
-
+<br>d<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
