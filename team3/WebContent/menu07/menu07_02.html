@@ -6,6 +6,42 @@
 
 <style type="text/css">
 
+/* ---------- header ---------- */
+.header {
+	padding: 30px;
+/* 	display: 0; */
+}
+
+
+/* 로고이미지 정렬 */
+.logo-img {
+	float: left;
+	height: 92px;
+}
+
+
+/* 헤더텍스트 정렬 */
+.logo-text {
+	float: right;
+	text-align: center;
+}
+
+
+.logo-text > span {
+	font-weight: 700;
+	line-height: 32px;
+	text-align: center;
+}
+
+
+.logo-text > span {
+	color: #05339e;
+	font-weight: 900;
+	line-height: 50px;
+	text-align: center;
+}
+
+
 /* ---------- main menu ---------- */
 
 /* 메인메뉴 스타일 */
@@ -16,7 +52,8 @@ ul.nav {
 	margin: 0;
 }
 
-/* 메인메뉴 항목 */
+
+/* 메rgb(255, 255, 255)목 */
 ul.nav > li {
 	float: left;
 	background: beige;
@@ -24,6 +61,7 @@ ul.nav > li {
 	border-right: 1px solid white;
 	position: relative;
 }
+
 
 /* 메인메뉴의 항목 텍스트 */
 ul.nav > li > a {
@@ -41,13 +79,16 @@ ul.nav > li > a {
 	margin: 0 2px;
 }
 
+
 /* 메인메뉴의 항목 텍스트에 마우스를 올렸을 때 */
 ul.nav > li > a:hover {
 	color: white;
 	background-color: #0A31B5;
 }
 
+
 /* ---------- sub menu ---------- */
+
 
 /* 서브메뉴 */
 ul.nav > li > ul {
@@ -61,6 +102,7 @@ ul.nav > li > ul {
 /* 	width: 198px; */
 }
 
+
 /* 서브메뉴의 항목 */
 ul.nav > li > ul > li {
 	background-color: white;
@@ -72,12 +114,14 @@ ul.nav > li > ul > li {
 	line-height: 0;
 }
 
+
 /* 메인메뉴 항목에 마우스를 올렸을 때 서브메뉴 */
 ul.nav > li:hover > ul > li {
 	height: 40px;
 	font-size: 15px;
 	line-height: 40px;
 }
+
 
 /* 서브메뉴의 항목 텍스트 */
 ul.nav > li > ul > li > a {
@@ -87,11 +131,13 @@ ul.nav > li > ul > li > a {
 	display: block;
 }
 
+
 /* 서브메뉴의 항목 텍스트에 마우스가 올라갔을 때 */
 ul.nav > li > ul > li > a:hover {
 	color: #999999;
 	text-align: center;
 }
+
 
 /* ---------- slider ---------- */
 
@@ -101,10 +147,12 @@ ul.nav > li > ul > li > a:hover {
 	position: relative;
 }
 
+
 .slider-wrap img {
 	width: 100%;
 	vertical-align: middle;
 }
+
 
 .slider-text {
 	position: absoulute;
@@ -120,7 +168,24 @@ ul.nav > li > ul > li > a:hover {
 	transform: translate(0%, -180%);
 }
 
-/* ----- board ----- */
+
+/* ---------- 사이드 메뉴 ---------- */
+
+
+.sidemenu {
+	float: left;
+	position: relative;
+	width: 30%;
+}
+
+.sidemenu p {
+	color: #666666;
+	font-size: 17px;
+}
+
+
+/* ---------- 공지사항 ---------- */
+
 
 .board * {
 /* 	border: 1px solid #ccc; */
@@ -133,13 +198,22 @@ ul.nav > li > ul > li > a:hover {
 </head>
 <body>
 
-<div>
-	<img alt="logo" src="../resources/logo-main.png">
-	<a href=http://www.g-car.kr></a>
-
-	<span style = "font-size: 30px">문의전화</span><br>
-	<span style = "font-size: 30px">1833-2122</span>
+<!-- 헤더 영역 -->
+<div class="header">
+	
+	<div class="logo-main">
+		<div class="logo_img">
+			<img alt="logo" src="../resources/logo-main.png">
+			<a href=http://www.g-car.kr></a>
+		</div>
+	
+		<div class="logo-text">
+			<span style = "font-size: 30px">문의전화</span><br>
+			<span style = "font-size: 50px">1833-2122</span>
+		</div>
+	</div>
 </div>
+
 
 <!-- menu -->
 <hr>
@@ -203,7 +277,7 @@ ul.nav > li > ul > li > a:hover {
 
 <br>
 
-<!-- 이미지 -->
+<!---------- 슬라이더 ---------->
 
 <div class="slider-wrap">
 	<div class="slider-image">
@@ -216,18 +290,26 @@ ul.nav > li > ul > li > a:hover {
 	</div>
 </div>
 
-<!-- 왼쪽 사이드 메뉴 -->
+
+<!---------- 사이드 메뉴 ---------->
+
 
 <div class="sidemenu">
-	<div>고객센터</div>
 	
-	<div>공지사항<br>
-		 자료실<br>
-		 포토 갤러리
+	<div class="sidemenu-1">
+		<h4>고객센터</h4>
 	</div>
+	
+	<div class="sidemenu-2">
+		<p>공지사항</p>
+		<p>자료실</p>
+		<p>포토갤러리</p>
+	</div>
+
 </div>
 
-<!-- 공지사항 -->
+
+<!---------- 공지사항 ---------->
 
 <h3>공지사항</h3>
 <hr>
