@@ -22,8 +22,6 @@ a {
 #MenuInline {
 	background: #fff;
 	
-	width: 100%;
-	
 	border-top: 0.5px solid #bbb;
 	border-bottom: 0.5px solid #bbb;
 	box-sizing: border-box;
@@ -36,12 +34,12 @@ a {
 
 #menu {
 
-	font-size: 15px;
+	font-size: 17px;
 	font-weight: bold;
 	
-	width: 1150px;
-	height: 50px;
-	line-height: 50px;
+	width: 1200px;
+	height: 60px;
+	line-height: 60px;
 	margin: 0 auto;
 	
 	text-align: center;
@@ -63,7 +61,8 @@ a {
 
 #menu > ul > li {
 	float: left;
-	width: 15.66666666666667%;
+	width: 16.66666666666667%;
+	height: 100%;
 	position: relative;
 	
 	
@@ -83,14 +82,13 @@ a {
 }
 
 #menu > ul > li > a {
-	width: 100%;
 	display: block;
 }
 
 /* 서브메뉴 설정 */
 
 #menu > ul > li > ul {
-	width: 180.16px;
+	width: 200px;
 	
 	display: none;
 	position: absolute;
@@ -111,43 +109,160 @@ header {
 }
 
 body {
-	padding-top: 52px;
+	padding-top: 60px;
 }
 
 /* -------------------------------- 이미지 슬라이드css ------------------------------- */
 
-/* 사이즈 조절 */
-.slide > li {
-	width: 1920px;
-	height: 600px;
+/* 레이아웃 조절 */
+
+#imgbanner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#imgbanner > div {
+    position: absolute;
+    
+    z-index: -1;
+}
+
+#imgbanner > .slide {
+	width: 100%;
+	max-height: 100%;
+}
+
+#imgbanner > .slide > li {
+	height: 630px;
 	
 	overflow: hidden;
 	
 	display:flex;
     align-items:center;
     
-    position: absolute;
-    
-    z-index: -1;
+    position: relative;
+    z-index: -2;
 }
 
-/* 슬라이드 추가 */
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+#imgbanner > .slide > li > img {
+	width: 100%;
+	height: 100%;
+	
+	object-fit: cover;
 }
 
-li {
-	list-style-type: none;
+
+#imgBox {
+	width: 100%;
+}
+
+/* 슬라이드 조절 button */
+
+
+/* -------------------------------- 중간 링크 메뉴 ---------------------------------- */
+
+.middleImg {
+	width: 386px;
+	height: 377px;
+	
+	background-position: center center;
+	}
+
+.middleTag {
+
+	background-position: right bottom;
+
+	width: 385px;
+	height: 165px;
+}
+
+#middleMenu {
+	display:flex;
+	justify-content: center;
+	
+	margin-top: 80px;
+}
+
+#middle {
+	position: relative;
+
+	border-collapse: separate;
+	border-spacing: 20px;
+	
+}
+
+span {
+	position: absolute;
+	margin: 30px;
+	
+}
+
+.middleTitle {
+	font-family: '고딕';
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.middleText {
+	margin-top: 75px;
+	
+	font-family: '고딕';
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.Fcolor {
+	color: white;
+}
+
+.Img1 {
+	background-image: url('images/banner01.jpg')
+}
+.Img2 {
+	background-image: url('images/banner02.jpg')
+}
+.Img3 {
+	background-image: url('images/banner03.jpg')
+}
+.Tag1 {
+	background-image: url('images/banner04.jpg')
+}
+.Tag2 {
+	background-image: url('images/banner05.jpg')
+}
+.Tag3 {
+	background-image: url('images/banner06.jpg')
 }
 
 </style>
+
+
+<script>
+
+/* 이미지 슬라이드 js */
+window.onload = function() {
+	var count = 1;
+
+	setInterval(function() {
+		var imgchange = document.getElementById('imgBox')
+		imgchange.setAttribute("src",("images/lotation0" + (count%6+1) + ".jpg"));
+		count++;
+		
+		if(count >= 6) {
+			count = 0;
+		}
+	}, 1000)	
+}
+
+</script>
+
 </head>
 
-<!------------------------------------ 메뉴 html ----------------------------------------->
+<!---------------------------------  상단 메뉴 html ----------------------------------------->
 <body>
+
+
 
 <header>
 <div id="MenuInline">
@@ -217,20 +332,49 @@ li {
 </header>
 
 <!------------------------------- 이미지 슬라이드 html -------------------------------->
-<div id="slideImg">
+<div id="imgbanner">
+	<div><img src="images/lotation-centerImg.png"></div>
 	<ul class="slide">
-		<li><img src="images/lotation01.jpg"></li>
-		<li><img src="images/lotation02.jpg"></li>
-		<li><img src="images/lotation03.jpg"></li>
-		<li><img src="images/lotation04.jpg"></li>
-		<li><img src="images/lotation05.jpg"></li>
-		<li><img src="images/lotation06.jpg"></li>
+		<li><img id="imgBox" src="images/lotation05.jpg"></li>
 	</ul>
 </div>
+
+<!-------------------------------- 중간 메뉴 html ------------------------------------->
+<div id="middleMenu">
+<table id="middle">
+	<tr>
+		<td>
+			<span class="middleTitle">학원소개</span>
+			<span class="middleText">쾌적한시설 및 환경! 편하고 빠르고 완벽하게!<br>
+			경험많은 강사진이 여러분의 합격을 위해 최선을 다<br>합니다.</span>
+			<a href="#"><img class="middleImg Img1"></a>
+		</td>
+		<td>
+			<span class="middleTitle">수강안내</span>
+			<span class="middleText">교육 준비물<br>
+			수강료<br>교육시간<br>응시절차</span>
+			<a href="#"><img class="middleImg Img2"></a>
+		</td>
+		<td>
+			<span class="middleTitle Fcolor">면허취득절차안내</h1></span>
+			<span class="middleText Fcolor">쾌적한시설 및 환경!<br>
+			편하고 빠르고 완벽하게!</span>
+			<a href="#"><img class="middleImg Img3"></a>
+		</td>
+	</tr>
+	<tr>
+		<td><a href="#"><img class="middleTag Tag1"></a></td>
+		<td><a href="#"><img class="middleTag Tag2"></a></td>
+		<td><a href="#"><img class="middleTag Tag3"></a></td>
+	</tr>
+</table>
+</div>
+
 <br>d<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 </body>
 </html>
