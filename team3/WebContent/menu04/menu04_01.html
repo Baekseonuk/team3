@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>면허취득 절차 - 김포자동차전문 학원</title>
+<style type="text/css">
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration-line: none;
+}
+
+*li{
+	 list-style: none;
+	 padding:0;
+	 margin:0;
+}
+
+
+
+/* 헤드 */
+
+div.head{
+	text-align:center;
+	
+}
+
+.topline {
+	background-color: #ffa800; 
+	height:5px;
+}
+
+
+.head-main {
+	max-width: 1200px; 
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 30px;
+	margin: 0 auto;
+	
+	/* border: 1px solid red; */
+}
+
+.head-logo {
+	float: left;
+}
+
+.head-tell {
+	text-align: center;
+	float: right;
+}
+
+div.head-tell > span:nth-child(1) {
+	font-size: 30px;
+    font-weight: 700;
+    color: #000000;
+}
+
+div.head-tell > span:nth-child(3) {
+	font-size: 50px;
+    font-weight: 900;
+    color: #05339e;
+    line-height: 50px;
+    letter-spacing: -0.06em;
+}
+
+
+/* 메인 메뉴*/
+div.main-menu-wrap{
+	display:inline-block;
+	width:100%;
+	border: 1px solid grey;
+	
+	
+}
+div.main-menu{
+	text-align: center;
+	max-width: 1200px;
+    margin: auto;
+}
+
+ul.g-menu {
+	position: relative;
+	margin:auto;
+	margin-top:-1px;
+}
+
+ul.g-menu > li{
+
+	display:inline-block;
+	position: relative;
+	background: white;
+	
+	width: 16.5%;
+	
+	font-weight: 500;
+    font-size: 18px;
+    
+	vertical-align:middle;
+	text-align: center;
+	line-height: 60px;
+	border: 1px solid grey;
+	
+	margin-right:-7px;
+	
+	
+	
+}
+
+/* 메인메뉴의 항목 텍스트 */
+ul.g-menu >li >a {
+
+	display:block;
+	
+	color: Black;
+	text-decoration: none;
+	font-weight: bold;
+	
+}
+
+/* 메인 메뉴의 항목 텍스트에 마우스를 올렸을 때 */
+ul.g-menu > li > a:hover {
+	color: white;
+	background-color: #0a31b5;
+	z-index:22;
+}
+
+/* 서브 메뉴 */
+ul.g-menu >li >ul {
+	
+	/* HTML 계층구조에서 빼내는 설정 */
+	position: absolute;
+	
+	/* ul태그의 기본 리스트 스타일(circle) 제거 */
+	list-style-type: none;
+	
+	/* ul의 기본 여백 제거 */
+	padding: 0;
+	margin: 0;
+	
+	/* 서브 메뉴의 영역의 너비 */
+	width: 150px;
+}
+
+/* 서브 메뉴의 항목 */
+div.hover-manu {
+	/* 배경색 지정 */
+	background: white;
+
+ 
+	/* 평소에 보이지 않도록 설정 */
+	height: 0;		/* 컨텐츠영역의 높이 제거 */
+	font-size: 0;	/* 글자 크기 제거 */
+	line-height: 0;	/* 줄간격 제거 */
+}
+ 
+ 
+/* 메인메뉴 항목에 마우스를 올릴 경우 
+	서브메뉴가 보이도록 설정하기*/
+ul.g-menu > li:hover  {
+	
+	height: 40px;		/* 컨텐츠영역의 높이 복원*/
+	font-size: 20px;	/* 글자 크기 복원*/
+	line-height: 40px;	/* 줄간격 복원*/
+}
+ 
+/* 서브메뉴의 항목 텍스트 */
+ul.g-menu > li > ul > li >a {
+ 
+	/* 배경색 지정 */
+	background: white;
+	
+	/* 글자색 지정 */
+	color : grey;
+	
+	/* 글자 꾸밈선 제거 (underline 제거)*/
+	text-decoration: none;
+	
+	/* 부모<li>태그 크기만큼 영역을 차지하도록 설정 */
+	display: block;
+}
+ 
+ 
+/* 서브메뉴의 항목 텍스트에 마우스가 올라갔을 때 */
+ul.g-menu > li > ul > li >a:hover {
+ 
+	/* 글자색 변경 */
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* 배너 */
+.banner {
+	background-image: url("/resources/image/background.jpg");
+	background-position:center;
+	background-size: 100%;
+	width: 100%; 
+	color : white;
+	height: 300px;
+	text-align: center;
+	position:relative;
+	z-index:-999;
+
+}
+
+div.banner div{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-300px;
+	margin-top:-30px;
+}
+
+div.banner div p:nth-child(1) {
+	font-size:1.5em;
+	
+}
+div.banner div p:nth-child(2) {
+	font-size:2em;
+	
+}
+
+
+/* ---------- 본문 ---------- */
+
+div.section-wrap {
+	margin:auto;
+	text-align:center;
+}
+
+.section {
+	width: 1200px;
+    display:inline-block;
+    
+}
+
+
+
+
+
+/* 본문 메인 */
+.content {
+    float: right;
+    position: relative;
+    width: 65%;
+}
+.con-head{
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 45px;
+	text-align:left;
+	padding: 30px 0px;
+}
+
+
+table {
+	  border-color: grey;
+	  text-align: left;
+	  border-spacing: 0;
+}
+
+.con-table1 td {
+    padding: 18px 12px;
+    color: #666666;
+    background-color: #ffeef6;
+    border: 1px solid #d2d2d2
+}
+
+.con-table1 tr td:nth-child(1) {
+	background-color: #ed68aa;
+	
+	color: white;
+	width: 40%;
+	
+}
+
+
+/* -----------사이드바 ------------*/
+
+.sidebar {
+	position: relative;
+	float: left;
+	width:25%;
+	text-align:left;
+}
+
+
+/* 사이드바 메뉴 */
+
+h4.sidebar-padding30{
+	padding-left:30px;
+}
+
+.sidebar-padding30 li{
+	padding-left:30px;
+}
+
+.sidebar li{
+	padding: 30px;
+	border-bottom: 1px solid #ccc;
+	
+}
+
+div.sidebar-head{
+	border-bottom: 1px solid #ccc;
+	text-align:left;
+	padding: 30px 0px;
+}
+
+
+
+/* 사이드바 위젯 */
+.online-form {
+	background: #e8e8e8;
+    padding: 1px 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+
+
+/* --------- footer --------*/
+
+.footer {
+	margin:auto;
+	background-color: #e0e0e0;
+
+}
+
+
+.footer-top {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+    padding-right: 30px;
+    
+}
+
+ul.footer-menu > li {
+
+	display: inline-block;
+	position : relative;
+}
+
+ul.footer-menu > li >a {
+	
+	color: black;
+}
+
+.footer-bottom {
+	padding: 0 30px 50px;
+}
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- head 영역 -->
+<div class="head">
+	<div class="topline">
+	</div>
+	
+	<div class="head-main">
+		<div class="head-logo">
+			<img src="../resources/logo-main.png" alt="김포자동차전문학원 로고" />
+		</div>
+		
+		<div class="head-tell">
+			<span>문의전화</span>
+			<br>
+			<span>1833-2122</span>
+		</div>
+	</div>
+</div>
+
+
+<!-- 메인 메뉴 영역 -->
+
+<div class="main-menu-wrap">
+<div class="main-menu">
+	<ul class="g-menu">
+		<li><a href="#">학원소개</a>
+			<ul>
+				<li><a href="#">원장인사말</a></li>
+				<li><a href="#">학원전경</a></li>
+				<li><a href="#">학원위치</a></li>
+			</ul>
+		</li>
+		<li><a href="#">수강안내</a>
+			<ul>
+				<li><a href="#">교육준비물</a></li>
+				<li><a href="#">수강료</a></li>
+				<li><a href="#">교육시간</a></li>
+				<li><a href="#">응시절차</a></li>
+			</ul>
+		</li>
+		<li><a href="#">면허시험안내</a>
+			<ul>
+				<li><a href="#">면허취득절차</a></li>
+				<li><a href="#">학과시험</a></li>
+				<li><a href="#">기능시험</a></li>
+				<li><a href="#">주행시험</a></li>
+			</ul>
+		</li>
+		<li><a href="#">도로주행시험코스</a>
+			<ul>
+				<li><a href="#">도로주행시험코스</a></li>
+			</ul>
+		</li>
+		<li><a href="#">온라인문의</a>
+			<ul>
+				<li><a href="#">온라인문의</a></li>
+				<li><a href="#">셔틀버스 안내</a></li>
+			</ul>
+		</li>
+		<li><a href="#">고객센터</a>
+			<ul>
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">자료실</a></li>
+				<li><a href="#">포토갤러리</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</div>
+
+
+<!-- 배너 영역 -->
+<div class="banner">
+	<div>
+		<p>G I M P O  D R I V I N G  A C A D E M Y</p>
+		<p>빠르고 완벽하게! 김포자동차 운전전문학원</p>	
+	</div>
+	
+</div>
+
+
+<!-- 본문 -->
+<div class="section-wrap">
+
+<div class="section">
+
+
+<!-- 주 콘텐츠 -->
+	<div class=content>
+	
+		<div class="con-head">
+			<h3>면허취득절차</h3>
+		</div>
+	
+		<div class="con-body">
+			<div class= "con-img1">
+				<img alt="면허취득절차" src="../resources/process.jpg">
+			</div>
+		
+			<div class="con-table1">
+				<table>
+				<tbody>
+				<tr>
+					<td>순서</td>
+					<td>절차 및 준비물</td>
+				</tr>
+				<tr>
+					<td>1. 학원 접수 및 등록</td>
+					<td>* 준비물 : 수강료, 응시원서(학과시험합격자), 신분증
+					</td>
+				</tr>
+				<tr>
+					<td>2. 학과교육	</td>
+					<td>* 평일, 주말 모두 가능.</td>
+				</tr>
+				<tr>
+					<td>3. 적성검사(학과시험보러갈때 실시)	</td>
+					<td>* 검사료 : 6,000원.<br>
+						* 장소 : 면허시험장(전국면허시험장).<br>
+						* 여권사진(3.5X4.5cm) 사진3매,신분증.</td>
+				</tr>
+				<tr>
+					<td>4.학과시험 (적성검사 후 PC시험)</td>
+					<td>* 인지대 : 10,000원.<br>
+						* 장소 : 면허시험장(전국 면허시험장).<br>
+						* 평일 9시-16시 사이 도착순 시험 실시.<br>
+						* 합격기준 : 1종보통 70점 이상, 2종보통 60점 이상</td>
+				</tr>
+				<tr>
+					<td>5.장내기능교육(본 학원 코스에서 실시)</td>
+					<td>* 운전장치조작등 기본조작 능력을 기능강사가 동승하여 교육.</td>
+				</tr>
+				<tr>
+					<td>6. 장내기능시험</td>
+					<td>* 장내기능교육 후 본 학원 코스에서 실시.<br>
+						* 준비물 : 운전면허 응시원서.<br>
+						* 100점 만점에 80점이상 합격.</td>
+				</tr>
+				<tr>
+					<td>7.도로주행교육(본학원 코스에서 실시)</td>
+					<td>* 본 학원 도로주행 코스에서 본 학원 차량으로 주행강사 동승하여 교육 실시.</td>
+				</tr>
+				<tr>
+					<td>8. 도로주행시험</td>
+					<td>* 본 학원 도로주행 코스에서 시험 실시.<br>
+						* 총 주행거리 5km 이상의 도로에서 실시.<br>
+						* 100점 만점에 70점 이상 합격.</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+<!-- 사이드메뉴 -->
+	<div class="sidebar">
+		
+		<div class="sidebar-head">
+			<h4 class="sidebar-padding30">면허시험안내</h4>
+		</div>
+		
+		<div class="sidebar-menu">
+			<ul class="sidebar-padding30">
+				<li><a href="#">면허취득절차</a></li>
+				<li><a href="#">학과시험</a></li>
+				<li><a href="#">기능시험</a></li>
+				<li><a href="#">주행시험</a></li>
+			</ul>
+		</div>
+		
+		<div class="widget-wrap">
+			<div class="widget-text">
+				<p>
+				<span style="font-size: 22px; font-weight: bold;">온라인 상담신청</span>
+				<br>
+				<span style="font-size: 15px; line-height: 18px; display: inline-block;">연락처를 남겨주시면 빠르고 친절하게 교육과정에 대해서 상담해드리겠습니다.</span>
+				</p>
+			</div>
+			
+			<div class="widget-form">
+				<form>
+					<div class="widget-form-box">
+						<div class="widget-form-box-name">
+							<input type="text" name="name" required placeholder="이름">
+						</div>
+						<div class="widget-form-box-tel">
+							<input type="tel" name="tel" required placeholder="전화번호">			
+						</div>
+						<div class="widget-form-box-memo">
+							<input type="text" name="memo"  required placeholder="간단 내용 입력 후 동의.">
+						</div>
+						<div class="widget-form-box-checkbox">
+							<input type="checkbox">
+							<a href="#" >개인정보취급방침</a>
+							<span>에 동의.(필수)</span>
+						</div>
+						<div class="widget-form-box-submit">
+							<input type="submit" value="상담신청하기">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+</div>
+
+
+<!-- footer 영역 -->
+<div class=footer>
+	<div class="footer-wrap">
+		<div class="footer-top">
+			<ul class="footer-menu">
+				<li><a href="#">개인정보취급방침</li>
+				<li><a href="#">학원소개</li>
+				<li><a href="#">수강안내</li>
+				<li><a href="#">면허시험안내</li>
+				<li><a href="#">도로주행시험코스</li>
+				<li><a href="#">온라인문의</li>
+				<li><a href="#">고객센터</li>
+			</ul>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="footer-bottom-notice">
+				<div class="footer-bottom-text">
+					<div>
+					<a href="#">(주)김포자동차운전전문학원</a>
+					</div>
+					<div>
+					<p>학원코드: 13613 / 지정번호: 20-07호 / 사업자번호 : 614-86-02418 / 업종 : 교육서비스업(운전학원) / 대표 : 홍성우</p>
+					<p>경기도 김포시 김포대로 1682 (양촌읍 석모리 17-2, 모아패션아울렛앞) / Tel. 1833-2122</p>
+					<br><br>
+					<p>Copyright 2022 김포자동자운전전문학원 | All Rights Reserved</p>
+					</div>
+				</div>
+				<div class="footer-bottom-qr">
+				<img alt="qr_gcar" src="../resources/qr_gcar.gif">
+				</div>
+				<div></div>
+			</div>
+		</div>
+	</div>	<!-- footer end -->
+</div>
+
+
+
+</body>
+</html>
