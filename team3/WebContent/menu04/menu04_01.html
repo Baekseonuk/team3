@@ -195,7 +195,8 @@ ul.g-menu > li > ul > li >a:hover {
 	text-decoration: underline;
 }
 
-/* 배너 */
+
+/* -------- 배너 ------------ */
 .banner {
 	background-image: url("/resources/image/background.jpg");
 	background-position:center;
@@ -219,11 +220,9 @@ div.banner div{
 
 div.banner div p:nth-child(1) {
 	font-size:1.5em;
-	
 }
 div.banner div p:nth-child(2) {
-	font-size:2em;
-	
+	font-size:2em;	
 }
 
 
@@ -239,7 +238,6 @@ div.section-wrap {
     display:inline-block;
     
 }
-
 
 
 
@@ -285,44 +283,132 @@ table {
 .sidebar {
 	position: relative;
 	float: left;
-	width:25%;
+	width:20%;
 	text-align:left;
 }
 
 
-/* 사이드바 메뉴 */
+/* --- 사이드바 메뉴 ---- */
 
-h4.sidebar-padding30{
-	padding-left:30px;
+
+h4.sidebar-head-title {
+	font-size: 25px;
+    line-height: 1.5;
+    padding: 0px 15px 18px;
+    border-bottom: 4px solid #0a31b5;
+    margin-top: revert;
+    margin-bottom: 0.15em;
+    font-weight: 400;
 }
 
-.sidebar-padding30 li{
-	padding-left:30px;
-}
 
 .sidebar li{
-	padding: 30px;
-	border-bottom: 1px solid #ccc;
+	padding: 18px 15px;
+	border-bottom: 1px solid #e7e6e6;
+}
+
+.sidebar-menu-li a {
+	font-size: 19;
+	line-height: 1.4;
+	color: #666666;
+
+}
+
+.sidebar-current-menu a {
+	color: #021ccc;
+	font-weight: 500 !important;
+    font-size: 19px!important;
+    font-weight: 400;
 	
 }
 
-div.sidebar-head{
-	border-bottom: 1px solid #ccc;
-	text-align:left;
-	padding: 30px 0px;
+.sidebar-menu-li a:hover {
+	color: #021ccc;
+	transition-duration: .2s;
+
 }
 
+/* --- 사이드바 위젯 --- */
 
-
-/* 사이드바 위젯 */
-.online-form {
+.widget-wrap {
 	background: #e8e8e8;
     padding: 1px 10px;
     margin-top: 20px;
     margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.widget-text {
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    line-height: 1.5;
+}
+
+.widget-form-box-name, .widget-form-box-tel {
+	float: left;
+}
+
+.widget-form-box-name input, .widget-form-box-tel input, .widget-form-box-memo input {
+    
+    height: 45px;
+    background-color: #ffffff;
+    font-size: 13px;
+    color: #707070;
+    border-width: 1px;
+    border-color: #eeeeee;
+    border-radius: 0px;
+    border: 1px solid #d2d2d2;
+    padding: 8px 15px;
+    width: 72px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    
+}
+
+.widget-form-box-memo input {
+	width: 182px;
+    float: left;
+    margin-bottom: 6px;
+
 }
 
 
+.widget-form-box-checkbox {
+	padding: 0;
+    margin-top: 5px;
+    margin-bottom: 6px;
+    color: black;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.widget-form-box-checkbox > a{
+	color: black;
+	text-decoration: underline;
+}
+
+.widget-form-box-submit input{
+	background: #ff9800;
+    color: #ffffff;
+    padding: 11px 23px;
+    line-height: 16px;
+    font-size: 13px;
+    font-style: normal;
+    border-color: #ff9800;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 0px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.widget-form-box-submit input:hover {
+	background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+
+}
 
 /* --------- footer --------*/
 
@@ -514,20 +600,22 @@ ul.footer-menu > li >a {
 				</tr>
 				</tbody>
 				</table>
-			</div>
+			</div><br><br>
 		</div>
 	</div>
 
-<!-- 사이드메뉴 -->
+
+
+<!-- 사이드바 -->
 	<div class="sidebar">
 		
 		<div class="sidebar-head">
-			<h4 class="sidebar-padding30">면허시험안내</h4>
+			<h4 class="sidebar-head-title">면허시험안내</h4>
 		</div>
 		
 		<div class="sidebar-menu">
-			<ul class="sidebar-padding30">
-				<li><a href="#">면허취득절차</a></li>
+			<ul class="sidebar-menu-li">
+				<li class="sidebar-current-menu"><a href="#">면허취득절차</a></li>
 				<li><a href="#">학과시험</a></li>
 				<li><a href="#">기능시험</a></li>
 				<li><a href="#">주행시험</a></li>
