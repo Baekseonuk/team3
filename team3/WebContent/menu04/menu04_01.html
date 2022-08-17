@@ -75,14 +75,16 @@ div.head-tell > span:nth-child(3) {
 }
 
 
+
+
 /* ------- 메인 메뉴 ----------*/
 div.main-menu-wrap{
 	display:inline-block;
 	width:100%;
-	border: 1px solid grey;
-	
+	border: 1px solid #d2d2d2;
 	
 }
+
 div.main-menu{
 	text-align: center;
 	max-width: 1200px;
@@ -93,6 +95,7 @@ ul.g-menu {
 	position: relative;
 	margin:auto;
 	margin-top:-1px;
+	list-style-type: none;
 }
 
 ul.g-menu > li{
@@ -101,7 +104,7 @@ ul.g-menu > li{
 	position: relative;
 	background: white;
 	
-	width: 16.5%;
+	width: 200px;
 	
 	font-weight: 500;
     font-size: 18px;
@@ -109,15 +112,14 @@ ul.g-menu > li{
 	vertical-align:middle;
 	text-align: center;
 	line-height: 60px;
-	border: 1px solid grey;
+	border: 1px solid #d2d2d2;
 	
 	margin-right:-7px;
 	
-	
-	
 }
 
-/* 메인메뉴의 항목 텍스트 */
+
+/* 메인메뉴 */
 ul.g-menu >li >a {
 
 	display:block;
@@ -125,16 +127,22 @@ ul.g-menu >li >a {
 	color: Black;
 	text-decoration: none;
 	font-weight: 500;
-
-	
 }
 
-/* 메인 메뉴의 항목 텍스트에 마우스를 올렸을 때 */
-ul.g-menu > li > a:hover {
+li.g-menu-current-menu > a {
+	color: white !important;
+	background-color: #0a31b5;
+}
+
+
+/* 메인 메뉴에 마우스를 올렸을 때 */
+ul.g-menu > li > a:hover  {
 	color: white;
 	background-color: #0a31b5;
-	z-index:22;
+	transition: all 0.5s;
+	/* z-index:22; */  /* 뭔지 모르겠음 */
 }
+
 
 /* 서브 메뉴 */
 ul.g-menu >li >ul {
@@ -142,64 +150,56 @@ ul.g-menu >li >ul {
 	/* HTML 계층구조에서 빼내는 설정 */
 	position: absolute;
 	
-	/* ul태그의 기본 리스트 스타일(circle) 제거 */
 	list-style-type: none;
-	
-	/* ul의 기본 여백 제거 */
 	padding: 0;
 	margin: 0;
-	
-	/* 서브 메뉴의 영역의 너비 */
-	width: 150px;
+	width: 200px;
 }
 
 /* 서브 메뉴의 항목 */
-div.hover-manu {
-	/* 배경색 지정 */
+ul.g-menu >li >ul >li {
+	
 	background: white;
 
- 
 	/* 평소에 보이지 않도록 설정 */
-	height: 0;		/* 컨텐츠영역의 높이 제거 */
-	font-size: 0;	/* 글자 크기 제거 */
-	line-height: 0;	/* 줄간격 제거 */
+	height: 0;		
+	font-size: 0;
+	line-height: 0;
 }
  
  
 /* 메인메뉴 항목에 마우스를 올릴 경우 
 	서브메뉴가 보이도록 설정하기*/
-ul.g-menu > li:hover  {
+ul.g-menu >li:hover > ul > li {
 	
 	height: 40px;		/* 컨텐츠영역의 높이 복원*/
-	font-size: 20px;	/* 글자 크기 복원*/
+	font-size: 15px;	/* 글자 크기 복원*/
 	line-height: 40px;	/* 줄간격 복원*/
+	
+	border: 1px solid red;
 }
  
-/* 서브메뉴의 항목 텍스트 */
+/* 서브메뉴 평소 */
 ul.g-menu > li > ul > li >a {
  
-	/* 배경색 지정 */
 	background: white;
-	
-	/* 글자색 지정 */
 	color : grey;
-	
-	/* 글자 꾸밈선 제거 (underline 제거)*/
 	text-decoration: none;
-	
 	/* 부모<li>태그 크기만큼 영역을 차지하도록 설정 */
 	display: block;
 }
  
  
-/* 서브메뉴의 항목 텍스트에 마우스가 올라갔을 때 */
+/* 서브메뉴 링크에 마우스가 올라갔을 때 */
 ul.g-menu > li > ul > li >a:hover {
  
 	/* 글자색 변경 */
 	color: black;
-	font-weight: bold;
+	font-weight: 400;
 	text-decoration: underline;
 }
+
+
 
 
 /* -------- 배너 ------------ */
@@ -216,6 +216,7 @@ ul.g-menu > li > ul > li >a:hover {
 
 }
 
+
 div.banner div{
 	position:absolute;
 	top:50%;
@@ -224,10 +225,13 @@ div.banner div{
 	margin-top:-30px;
 }
 
+
 div.banner div p:nth-child(1) {
 	font-size:20px;
 	font-weight: 500;
 }
+
+
 div.banner div p:nth-child(2) {
 	
 	font-size: 33px;
@@ -236,7 +240,7 @@ div.banner div p:nth-child(2) {
 }
 
 
-/* ---------- 본문 ---------- */
+/* ---------- 본문 전체 ---------- */
 
 div.section-wrap {
 	margin:auto;
@@ -258,6 +262,8 @@ div.section-wrap {
     padding-top: 30px;
     width: calc(100% - 20% - 80px);
 }
+
+
 .con-head h3{
 	padding-bottom: 18px;
 	border-bottom: 1px solid #ccc;
@@ -276,6 +282,7 @@ div.section-wrap {
 	padding-bottom: 50px;
 }
 
+/* 테이블 설정 */
 table {
 	  border-color: grey;
 	  text-align: left;
@@ -510,9 +517,9 @@ ul.footer-menu > li >a {
 				<li><a href="#">응시절차</a></li>
 			</ul>
 		</li>
-		<li><a href="#">면허시험안내</a>
+		<li class="g-menu-current-menu"><a href="#">면허시험안내</a>
 			<ul>
-				<li><a href="#">면허취득절차</a></li>
+				<li><a  href="#">면허취득절차</a></li>
 				<li><a href="#">학과시험</a></li>
 				<li><a href="#">기능시험</a></li>
 				<li><a href="#">주행시험</a></li>
