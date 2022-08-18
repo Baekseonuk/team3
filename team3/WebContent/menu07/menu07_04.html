@@ -5,7 +5,7 @@
 <title>공지사항 - 김포자동차전문학원</title>
 
 <style>
-@import url('https://fonts.google.com/noto/specimen/Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 </style>
 
 
@@ -53,14 +53,14 @@
 }
 
 
-.logo-text > span {
+#tel_text {
 	font-weight: 700;
 	line-height: 32px;
 	text-align: center;
 }
 
 
-.logo-text > span {
+#tel_num {
 	font-weight: 900;
 	line-height: 50px;
 	text-align: center;
@@ -122,6 +122,11 @@ ul.nav > li > a {
 	
  	line-height: 1;
 	margin: 0 auto;
+}
+
+
+ul.nav > li:nth-child(6) {
+	background-color: #0A31B5;
 }
 
 
@@ -222,6 +227,22 @@ ul.nav > li > ul > li > a:hover {
 }
 
 
+.background-content {
+	height: 76px;
+}
+
+
+.background-content > p:nth-child(1) {
+	margin-bottom: 14px;
+	font-size: 18px;
+}
+
+
+.background-content > p:nth-child(2) {
+ 	font-size: 32px; 
+}
+
+
 /* ---------- 내용 ---------- */
 
 
@@ -285,8 +306,19 @@ h4 {
 }
 
 
+.sidebar-2 > ul > li:nth-child(1) {
+	 font-size: 19px;
+	 font-weight: 500;
+}
+
+
 .sidebar-2 > ul > li > a {
 	color: black;
+}
+
+
+.sidebar-2 > ul > li > a:hover {
+	color: #021ccc;
 }
 
 
@@ -428,6 +460,36 @@ h3 {
 	font-size: 13px;
 }
 
+/* 게시판 텍스트 정렬 */
+.list-table tbody > tr > td:nth-child(1) {
+	text-align: center;
+	color: #666666;
+}
+
+
+.list-table tbody > tr > td:nth-child(3) {
+	text-align: center;
+	color: #666666;
+}
+
+
+.list-table tbody > tr > td:nth-child(4) {
+	text-align: center;
+	color: #666666;
+}
+
+
+.list-table tbody > tr > td:nth-child(5) {
+	text-align: center;
+	color: #666666;
+}
+
+
+.list-table tbody > tr > td:nth-child(6) {
+	text-align: center;
+	color: #666666;
+}
+
 
 /* 공지사항 페이지 부분 */
 #paging {
@@ -452,6 +514,30 @@ h3 {
 }
 
 
+#search_sort {
+	padding: 0px 5px;
+	border: 1px solid #f1f1f1;
+	width: 100px;
+	height: 26px;
+	font-size: 13px;
+	color: #666666;
+	vertical-align: middle;
+	box-sizing: content-box;
+	line-height: 26px;
+}
+
+#search_text {
+	padding: 0px 5px;
+	border: 1px solid #f1f1f1;
+	width: 200px;
+	font-size: 13px;
+	color: #666666;
+	vertical-align: middle;
+	box-sizing: content-box;
+	line-height: 26px;
+}
+
+
 #write_btn {
 	position:absoulute;
 	right: 0;
@@ -466,6 +552,7 @@ button {
 	margin: 0;
 	border: 0;
 	padding: 0px 6px;
+	height: 25px;
 }
 
 
@@ -535,8 +622,8 @@ button {
 		</div>
 	
 		<div class="logo-text">
-			<span style = "font-size: 30px; color: #000000;">문의전화</span><br>
-			<span style = "font-size: 50px; color: #05339e;">1833-2122</span>
+			<span id="tel_text" style = "font-size: 30px; color: #000000;">문의전화</span><br>
+			<span id="tel_num" style = "font-size: 50px; color: #05339e;">1833-2122</span>
 		</div>
 	</div>
 </div>
@@ -589,7 +676,7 @@ button {
 		</ul>
 	</li>
 		
-	<li><a href="#">고객센터</a>
+	<li><a href="#" style="color: white;">고객센터</a>
 		<ul>
 			<li><a href="#">공지사항</a></li>
 			<li><a href="#">자료실</a></li>
@@ -605,12 +692,12 @@ button {
 
 <div class="background">
 	<div class="background-content">
-		<p style="font-size: 18px;">GIMPO DRIVING ACADEMY</p><br>
-		<p style="font-size: 32px;">빠르고 완벽하게! 김포자동차운전전문학원</p>
+		<p>G I M P O&nbsp;&nbsp;&nbsp;&nbsp;D R I V I N G&nbsp;&nbsp;&nbsp;&nbsp;A C A D E M Y</p>
+		<p>빠르고 완벽하게! 김포자동차운전전문학원</span>
 	</div>
 </div>
 
-<br>
+
 
 <!---------- 사이드바 영역 ---------->
 
@@ -624,7 +711,7 @@ button {
 	
 	<div class="sidebar-2">
 		<ul>
-			<li><a href="#">공지사항</a></li>
+			<li><a href="#" style="color: #021ccc;">공지사항</a></li>
 			<li><a href="#">자료실</a></li>
 			<li><a href="#">포토갤러리</a></li>
 		</ul>
@@ -737,14 +824,14 @@ button {
 	</div>
 	
 	<div id="search_box">
-			<select>
+			<select id="search_sort">
 				<option>전체</option>
 				<option>제목</option>
 				<option>내용</option>
 				<option>작성자</option>
 			</select>
 			
-			<input type="text" name="search" required="required">
+			<input type="text" id="search_text" name="search" required="required" >
 			<button>검색</button>
 	</div>
 	
