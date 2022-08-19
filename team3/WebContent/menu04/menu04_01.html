@@ -3,13 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <title>면허취득 절차 - 김포자동차전문 학원</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+</style>
+
 <style type="text/css">
+
+
+/* 링크 연결 남음 */
+
+
+/* --------- 전체 설정 ------- */
 
 * {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 	text-decoration-line: none;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 300;
 }
 
 *li{
@@ -20,16 +35,15 @@
 
 
 
-/* 헤드 */
+/* --------- 헤드 ------------*/
 
 div.head{
-	text-align:center;
-	
+	text-align:center;	
 }
 
 .topline {
 	background-color: #ffa800; 
-	height:5px;
+	height:6px;
 }
 
 
@@ -53,13 +67,18 @@ div.head{
 	float: right;
 }
 
-div.head-tell > span:nth-child(1) {
+#head-tell-text {
 	font-size: 30px;
     font-weight: 700;
     color: #000000;
 }
 
-div.head-tell > span:nth-child(3) {
+i {
+	color: #ffa800;
+	font-size: 36px;
+}
+
+#head-tell-num {
 	font-size: 50px;
     font-weight: 900;
     color: #05339e;
@@ -68,14 +87,14 @@ div.head-tell > span:nth-child(3) {
 }
 
 
-/* 메인 메뉴*/
+/* --------- 메인 메뉴 ----------*/
 div.main-menu-wrap{
 	display:inline-block;
 	width:100%;
-	border: 1px solid grey;
-	
+	border: 1px solid #d2d2d2;
 	
 }
+
 div.main-menu{
 	text-align: center;
 	max-width: 1200px;
@@ -86,6 +105,7 @@ ul.g-menu {
 	position: relative;
 	margin:auto;
 	margin-top:-1px;
+	list-style-type: none;
 }
 
 ul.g-menu > li{
@@ -94,7 +114,7 @@ ul.g-menu > li{
 	position: relative;
 	background: white;
 	
-	width: 16.5%;
+	width: 200px;
 	
 	font-weight: 500;
     font-size: 18px;
@@ -102,31 +122,37 @@ ul.g-menu > li{
 	vertical-align:middle;
 	text-align: center;
 	line-height: 60px;
-	border: 1px solid grey;
+	border: 1px solid #d2d2d2;
 	
 	margin-right:-7px;
 	
-	
-	
 }
 
-/* 메인메뉴의 항목 텍스트 */
+
+/* 메인메뉴 */
 ul.g-menu >li >a {
 
 	display:block;
 	
 	color: Black;
 	text-decoration: none;
-	font-weight: bold;
-	
+	font-weight: 500;
 }
 
-/* 메인 메뉴의 항목 텍스트에 마우스를 올렸을 때 */
-ul.g-menu > li > a:hover {
+li.g-menu-current-menu > a {
+	color: white !important;
+	background-color: #0a31b5;
+}
+
+
+/* 메인 메뉴에 마우스를 올렸을 때 */
+ul.g-menu > li > a:hover  {
 	color: white;
 	background-color: #0a31b5;
-	z-index:22;
+	transition: all 0.5s;
+	/* z-index:22; */  /* 뭔지 모르겠음 */
 }
+
 
 /* 서브 메뉴 */
 ul.g-menu >li >ul {
@@ -134,66 +160,65 @@ ul.g-menu >li >ul {
 	/* HTML 계층구조에서 빼내는 설정 */
 	position: absolute;
 	
-	/* ul태그의 기본 리스트 스타일(circle) 제거 */
 	list-style-type: none;
-	
-	/* ul의 기본 여백 제거 */
 	padding: 0;
 	margin: 0;
-	
-	/* 서브 메뉴의 영역의 너비 */
-	width: 150px;
+	width: 200px;
+}
+
+ul.g-menu:hover >li >ul {
+	  height: 167px;
+    background-color: white;
+    border-left: 2px dotted #ccc;
 }
 
 /* 서브 메뉴의 항목 */
-div.hover-manu {
-	/* 배경색 지정 */
+ul.g-menu >li >ul >li {
+	
 	background: white;
 
- 
 	/* 평소에 보이지 않도록 설정 */
-	height: 0;		/* 컨텐츠영역의 높이 제거 */
-	font-size: 0;	/* 글자 크기 제거 */
-	line-height: 0;	/* 줄간격 제거 */
+	height: 0;		
+	font-size: 0;
+	line-height: 0;
 }
  
  
 /* 메인메뉴 항목에 마우스를 올릴 경우 
 	서브메뉴가 보이도록 설정하기*/
-ul.g-menu > li:hover  {
+ul.g-menu:hover  >li> ul > li {
 	
 	height: 40px;		/* 컨텐츠영역의 높이 복원*/
-	font-size: 20px;	/* 글자 크기 복원*/
+	font-size: 15px;	/* 글자 크기 복원*/
 	line-height: 40px;	/* 줄간격 복원*/
+	
+	/* border: 1px solid red; */
 }
  
-/* 서브메뉴의 항목 텍스트 */
+/* 서브메뉴 평소 */
 ul.g-menu > li > ul > li >a {
  
-	/* 배경색 지정 */
 	background: white;
-	
-	/* 글자색 지정 */
 	color : grey;
-	
-	/* 글자 꾸밈선 제거 (underline 제거)*/
 	text-decoration: none;
-	
 	/* 부모<li>태그 크기만큼 영역을 차지하도록 설정 */
 	display: block;
 }
  
  
-/* 서브메뉴의 항목 텍스트에 마우스가 올라갔을 때 */
+/* 서브메뉴 링크에 마우스가 올라갔을 때 */
 ul.g-menu > li > ul > li >a:hover {
  
 	/* 글자색 변경 */
 	color: black;
-	font-weight: bold;
+	font-weight: 400;
 	text-decoration: underline;
 }
 
-/* 배너 */
+
+
+
+/* -------- 배너 ------------ */
 .banner {
 	background-image: url("/resources/image/background.jpg");
 	background-position:center;
@@ -207,6 +232,7 @@ ul.g-menu > li > ul > li >a:hover {
 
 }
 
+
 div.banner div{
 	position:absolute;
 	top:50%;
@@ -215,17 +241,22 @@ div.banner div{
 	margin-top:-30px;
 }
 
+
 div.banner div p:nth-child(1) {
-	font-size:1.5em;
-	
+	font-size:20px;
+	font-weight: 400;
 }
+
+
 div.banner div p:nth-child(2) {
-	font-size:2em;
 	
+	font-size: 30px;
+	font-weight: 400;
+    line-height: 1.5;
 }
 
 
-/* ---------- 본문 ---------- */
+/* ---------- 본문 전체 ---------- */
 
 div.section-wrap {
 	margin:auto;
@@ -239,23 +270,35 @@ div.section-wrap {
 }
 
 
-
-
-
-/* 본문 메인 */
+/* --- 본문 메인 --- */
 .content {
     float: right;
     position: relative;
     width: 65%;
+    padding-top: 30px;
+    width: calc(100% - 20% - 80px);
 }
-.con-head{
+
+
+.con-head h3{
+	padding-bottom: 18px;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 45px;
 	text-align:left;
-	padding: 30px 0px;
+	font-size: 30px;
+	line-height: 1.4;
+	font-weight: 500;
 }
 
+.con-body {
+	padding-bottom: 60px;
+}
 
+.con-img1, .con-table1 {
+	padding-bottom: 50px;
+}
+
+/* 테이블 설정 */
 table {
 	  border-color: grey;
 	  text-align: left;
@@ -283,78 +326,188 @@ table {
 .sidebar {
 	position: relative;
 	float: left;
-	width:25%;
+	width:20%;
 	text-align:left;
 }
 
 
-/* 사이드바 메뉴 */
+/* --- 사이드바 메뉴 ---- */
 
-h4.sidebar-padding30{
-	padding-left:30px;
+
+h4.sidebar-head-title {
+	font-size: 25px;
+    line-height: 1.5;
+    padding: 0px 15px 18px;
+    border-bottom: 4px solid #0a31b5;
+    margin-top: revert;
+    margin-bottom: 0.15em;
+    font-weight: 400;
 }
 
-.sidebar-padding30 li{
-	padding-left:30px;
-}
 
 .sidebar li{
-	padding: 30px;
-	border-bottom: 1px solid #ccc;
+	padding: 18px 15px;
+	border-bottom: 1px solid #e7e6e6;
+}
+
+.sidebar-menu-li a {
+	font-size: 19;
+	line-height: 1.4;
+	color: #666666;
+	font-weight: 300;
+
+}
+
+.sidebar-current-menu a {
+	color: #021ccc;
+	font-weight: 500;
+    font-size: 19px!important;
 	
 }
 
-div.sidebar-head{
-	border-bottom: 1px solid #ccc;
-	text-align:left;
-	padding: 30px 0px;
+.sidebar-menu-li a:hover {
+	color: #021ccc;
+	transition-duration: .2s;
+
 }
 
+/* --- 사이드바 위젯 --- */
 
-
-/* 사이드바 위젯 */
-.online-form {
+.widget-wrap {
 	background: #e8e8e8;
     padding: 1px 10px;
     margin-top: 20px;
     margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.widget-text {
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    line-height: 1.5;
+}
+
+.widget-form-box-name, .widget-form-box-tel {
+	float: left;
+}
+
+.widget-form-box-name input, .widget-form-box-tel input, .widget-form-box-memo input {
+    
+    height: 45px;
+    background-color: #ffffff;
+    font-size: 13px;
+    color: #707070;
+    border-width: 1px;
+    border-color: #eeeeee;
+    border-radius: 0px;
+    border: 1px solid #d2d2d2;
+    padding: 8px 15px;
+    width: 72px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    
+}
+
+.widget-form-box-memo input {
+	width: 182px;
+    float: left;
+    margin-bottom: 6px;
+
 }
 
 
+.widget-form-box-checkbox {
+	padding: 0;
+    margin-top: 5px;
+    margin-bottom: 6px;
+    color: black;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.widget-form-box-checkbox > a{
+	color: black;
+	text-decoration: underline;
+}
+
+.widget-form-box-submit input{
+	background: #ff9800;
+    color: #ffffff;
+    padding: 11px 23px;
+    line-height: 16px;
+    font-size: 13px;
+    font-style: normal;
+    border-color: #ff9800;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 0px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.widget-form-box-submit input:hover {
+	background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+
+}
 
 /* --------- footer --------*/
 
 .footer {
 	margin:auto;
 	background-color: #e0e0e0;
-
-}
-
-
-.footer-top {
-	padding-top: 20px;
 	padding-bottom: 20px;
-	padding-left: 30px;
-    padding-right: 30px;
-    
+
 }
+
+/* --- footer 상단 메뉴 --- */
+.footer-top {
+	margin: 0 30px;
+    padding: 27px 0;
+    border-bottom: 1px solid #ccc;  
+}
+
 
 ul.footer-menu > li {
 
 	display: inline-block;
 	position : relative;
+	padding: 3px 10px;
+    border-right: 1px solid #a9a4a4;
+    font-size: 15px;
 }
 
+
 ul.footer-menu > li >a {
-	
 	color: black;
 }
 
+
+/* --- footer 하단 텍스트 ---- */
 .footer-bottom {
-	padding: 0 30px 50px;
+	padding: 50px 30px;
 }
 
+#footer-main-link {
+	font-weight: 500;
+    font-size: 28px;
+    color: #282828;
+}
 
+#footer-copyright {
+	font-size: 13px;
+	padding-top: 10px;
+}
+
+.footer-bottom-text {
+	float: left;
+}
+
+.footer-bottom-qr {	
+	text-align: right;
+}
 
 
 
@@ -367,16 +520,16 @@ ul.footer-menu > li >a {
 <div class="head">
 	<div class="topline">
 	</div>
-	
 	<div class="head-main">
 		<div class="head-logo">
 			<img src="../resources/logo-main.png" alt="김포자동차전문학원 로고" />
 		</div>
 		
 		<div class="head-tell">
-			<span>문의전화</span>
+			<span id="head-tell-text">문의전화</span>
 			<br>
-			<span>1833-2122</span>
+			<i class="fa-solid fa-phone-flip"></i>
+			<span id="head-tell-num">1833-2122</span>
 		</div>
 	</div>
 </div>
@@ -402,9 +555,9 @@ ul.footer-menu > li >a {
 				<li><a href="#">응시절차</a></li>
 			</ul>
 		</li>
-		<li><a href="#">면허시험안내</a>
+		<li class="g-menu-current-menu"><a href="#">면허시험안내</a>
 			<ul>
-				<li><a href="#">면허취득절차</a></li>
+				<li><a  href="#">면허취득절차</a></li>
 				<li><a href="#">학과시험</a></li>
 				<li><a href="#">기능시험</a></li>
 				<li><a href="#">주행시험</a></li>
@@ -516,16 +669,18 @@ ul.footer-menu > li >a {
 		</div>
 	</div>
 
-<!-- 사이드메뉴 -->
+
+
+<!-- 사이드바 -->
 	<div class="sidebar">
 		
 		<div class="sidebar-head">
-			<h4 class="sidebar-padding30">면허시험안내</h4>
+			<h4 class="sidebar-head-title">면허시험안내</h4>
 		</div>
 		
 		<div class="sidebar-menu">
-			<ul class="sidebar-padding30">
-				<li><a href="#">면허취득절차</a></li>
+			<ul class="sidebar-menu-li">
+				<li class="sidebar-current-menu"><a href="#">면허취득절차</a></li>
 				<li><a href="#">학과시험</a></li>
 				<li><a href="#">기능시험</a></li>
 				<li><a href="#">주행시험</a></li>
@@ -537,7 +692,7 @@ ul.footer-menu > li >a {
 				<p>
 				<span style="font-size: 22px; font-weight: bold;">온라인 상담신청</span>
 				<br>
-				<span style="font-size: 15px; line-height: 18px; display: inline-block;">연락처를 남겨주시면 빠르고 친절하게 교육과정에 대해서 상담해드리겠습니다.</span>
+				<span style="font-size: 15px; font-weight: 300; line-height: 18px; display: inline-block;">연락처를 남겨주시면 빠르고 친절하게 교육과정에 대해서 상담해드리겠습니다.</span>
 				</p>
 			</div>
 			
@@ -578,13 +733,13 @@ ul.footer-menu > li >a {
 	<div class="footer-wrap">
 		<div class="footer-top">
 			<ul class="footer-menu">
-				<li><a href="#">개인정보취급방침</li>
-				<li><a href="#">학원소개</li>
-				<li><a href="#">수강안내</li>
-				<li><a href="#">면허시험안내</li>
-				<li><a href="#">도로주행시험코스</li>
-				<li><a href="#">온라인문의</li>
-				<li><a href="#">고객센터</li>
+				<li style="border-left: 1px solid #a9a4a4"><a href="#">개인정보취급방침</a></li>
+				<li><a href="#">학원소개</a></li>
+				<li><a href="#">수강안내</a></li>
+				<li><a href="#">면허시험안내</a></li>
+				<li><a href="#">도로주행시험코스</a></li>
+				<li><a href="#">온라인문의</a></li>
+				<li><a href="#">고객센터</a></li>
 			</ul>
 		</div>
 		
@@ -592,19 +747,19 @@ ul.footer-menu > li >a {
 			<div class="footer-bottom-notice">
 				<div class="footer-bottom-text">
 					<div>
-					<a href="#">(주)김포자동차운전전문학원</a>
+					<a id="footer-main-link" href="#">(주)김포자동차운전전문학원</a>
 					</div>
 					<div>
 					<p>학원코드: 13613 / 지정번호: 20-07호 / 사업자번호 : 614-86-02418 / 업종 : 교육서비스업(운전학원) / 대표 : 홍성우</p>
 					<p>경기도 김포시 김포대로 1682 (양촌읍 석모리 17-2, 모아패션아울렛앞) / Tel. 1833-2122</p>
-					<br><br>
-					<p>Copyright 2022 김포자동자운전전문학원 | All Rights Reserved</p>
+					<p id="footer-copyright">Copyright 2022 김포자동자운전전문학원 | All Rights Reserved</p>
 					</div>
 				</div>
 				<div class="footer-bottom-qr">
 				<img alt="qr_gcar" src="../resources/qr_gcar.gif">
 				</div>
-				<div></div>
+				<div>
+				</div>
 			</div>
 		</div>
 	</div>	<!-- footer end -->
