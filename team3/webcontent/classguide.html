@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+/* header */
+
+#header {
+	background-color: orange;
+	height: 6px;
+	border: 0;
+}
+
+#mainlogo {
+	height: 150px;
+	margin: 100 100px;
+	align-items:center;
+	justify-content: space-around;
+	display: flex;
+}
+
+#inquiry {
+	font-size: 30px;
+	font-weight: 700;
+	color: #000000;
+	text-align: center;
+}
+
+#tell {
+	font-size: 50px;
+	font-weight: 1000;
+	color: #0a31b5;
+}
+
+/* 메인메뉴*/
+
+a {
+	text-decoration: none;
+}
+
+div.menuOutline {
+	display:inline-block;
+	width:100%;
+	border: 1px solid #f2f2f2;
+	
+}
+
+div.mainmenu {
+	text-align: center;
+	max-width: 1200px;
+    margin: auto;
+}
+
+ul.menu {
+	list-style-type: none;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	
+}
+
+ul.menu > li {
+
+ 	display:inline-block;	 
+	font-weight: 300;
+    font-size: 15px;
+	text-align: center;
+	border: 1px solid #eeeeee;
+	margin-right:-7px;
+	position: relative;
+	vertical-align:middle;	
+}
+
+ul.menu > li > a {
+	color: #666;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 20px 40px;
+	margin: 0 3px;
+	display:block;
+	
+}			
+
+/* 서브메뉴 */
+
+ul.menu > li > ul {
+	position: absolute;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	left: 10px;
+ 	width: 150px; 
+	display: block; 
+}
+
+ul.menu > li > ul > li {
+	background: #fff;
+	height: 0;		
+	font-size: 0;
+	line-height: 0;
+}
+
+ul.menu > li > ul > li > a {
+	background: #fff;
+	color: #BBBBBB;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+}
+
+ul.menu > li > ul > li > a:hover {
+ 
+ 	color: black;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+ul.menu:hover > li > ul {
+	 height: 167px;
+    background-color: white;
+    border-left: 2px dotted #ccc;
+}
+
+ul.menu:hover > li > ul > li {
+	
+	height: 40px;		
+	font-size: 15px;	
+	line-height: 40px;	
+}
+
+
+ul.menu > li > a:hover {
+	color: #fff;
+	background: #0037ba;
+	transition: all 0.5s;
+}
+
+ul.menu > li:hover > ul > li {
+	height: 40px;
+	font-size: 15px;
+	line-height: 40px;
+	text-align: center;
+	display: block;
+}			
+
+
+ul.menu > li > ul > li:hover > a {
+	color: #333;
+	text-decoration: underline;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+}	
+
+/* pslider */
+
+
+
+
+/* page */
+
+#index {
+
+	width: 5px;
+	height: 30px;
+	border-radius: 20%;
+	background-color: #0080FF;
+}
+
+table {
+    width: 1100px;
+    border: 1px solid #ccc; 
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #0000cd;
+    color: #fff;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    font-weight: normal;
+  }
+  td {
+    background-color: #AED6F1;
+    padding: 20px;
+    color: #424949;
+  }
+
+div.a {
+	padding: 5px;
+	font-size: 18px;
+}
+
+div.b {
+	color: #0000cd;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- header logo -->
+
+<header>
+<hr id=header>
+<div id="mainlogo">
+	<div id="logo">
+		<a href="#"><img src="image/logo.png"></a>
+	</div>
+	<div>
+		<div id="inquiry">문의전화</div>
+		<span id="tell"><img id="tellLogo" src="image/telephon.png">1833-2122</span>
+		
+	</div>
+</div>
+</header>
+
+<!-- 메인메뉴 -->
+
+<div class="menuOutline">
+<div class="mainmenu">
+	<ul class="menu">
+		<li><a href="#">학원소개</a>
+			<ul>
+				<li><a href="#">원장인사말</a></li>
+				<li><a href="#">학원전경</a></li>
+				<li><a href="#">학원위치</a></li>
+			</ul>
+		</li>
+		<li><a href="http://localhost:8088/team3/team3_01.html">수강안내</a>
+			<ul>
+				<li><a href="http://localhost:8088/team3/team3_01.html">교육준비물</a></li>
+				<li><a href="#">수강료</a></li>
+				<li><a href="#">교육시간</a></li>
+				<li><a href="#">응시절차</a></li>
+			</ul>
+		</li>
+		<li class="#"><a href="#">면허시험안내</a>
+			<ul>
+				<li><a  href="#">면허취득절차</a></li>
+				<li><a href="#">학과시험</a></li>
+				<li><a href="#">기능시험</a></li>
+				<li><a href="#">주행시험</a></li>
+			</ul>
+		</li>
+		<li><a href="#">도로주행시험코스</a>
+			<ul>
+				<li><a href="#">도로주행시험코스</a></li>
+			</ul>
+		</li>
+		<li><a href="#">온라인문의</a>
+			<ul>
+				<li><a href="#">온라인문의</a></li>
+				<li><a href="#">셔틀버스 안내</a></li>
+			</ul>
+		</li>
+		<li><a href="#">고객센터</a>
+			<ul>
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">자료실</a></li>
+				<li><a href="#">포토갤러리</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</div>
+
+<!-- pslider -->
+
+<a href="#"><img src="image/pslider.jpg"></a>
+
+<div class="pslider">
+	<div>
+		<p>G I M P O  D R I V I N G  A C A D E M Y</p>
+		<p>빠르고 완벽하게! 김포자동차 운전전문학원</p>	
+	</div>
+	
+</div>
+
+<!-- page -->
+
+<h1>교육준비물</h1>
+<hr> <br>
+<div>
+	<div id = "index" style="float: left"></div>
+<div>
+	<div>
+	<div class="a">&nbsp;&nbsp;입학시 준비물</div>
+	</div>
+</div>
+</div>
+
+<p>
+<table>
+	<tr>
+		<th>신규취득<br>(처음 시작하시는분)</th>
+		<td>
+		여권사진(3.5X4.5cm) 또는 반명함사진(3.0X4.0cm) 3매, 주민등록증, 학원등록비
+		</td>
+	</tr>
+	
+	<tr>
+		<th>학과시험보신분<br>(필기합격자)</th>
+		<td>
+		여권사진(3.5X4.5cm) 또는 반명함사진(3.0X4.0cm) 1매, 주민등록증, 학원등록비, 응시원서
+		</td>
+	</tr>
+	<tr>
+		<th>경력자<br>(면허취소자)</th>
+		<td>
+		여권사진(3.5X4.5cm)또는 반명함사진(3.0X4.0cm) 3매, 주민등록증, 학원등록비<br>
+		운전경력증명서 (경찰서민원실이나,민원24시 무료발급)	
+		</td>
+	</tr>
+	<tr>
+		<th>종별변경<br>(2종 보통 -> 1종 보통)</th>
+		<td>
+		여권사진(3.5X4.5cm)또는 반명함사진(3.0X4.0cm) 3매, 주민등록증, 학원등록비<br>
+		운전경력증명서, 1종보통 적성검사받은 응시원서(연습면허), 면허증
+		</td>
+	</tr>	
+	<tr>
+		<th>도로주행만 접수</th>
+		<td>
+		여권사진(3.5X4.5cm)또는 반명함사진(3.0X4.0cm) 1매, 주민등록증, 학원등록비, 응시원서(연습면허)
+		</td>
+	</tr>				
+</table>
+</p>
+
+<br><br>
+
+<div>
+	<div id = "index" style="float: left"></div>
+<div>
+	<div>
+	<div class="a">&nbsp;&nbsp;입학시 준비물</div>
+	</div>
+</div>
+</div>
+
+<p>
+<table>
+	<tr>
+		<th>적성검사<br>(신체검사)<br>받는 곳</th>
+		<td>학과시험 응시전에 적성검사를 받아야 합니다.<br>
+			적성검사 받을수 있는곳(비용) 안내<br>
+			- 국가면허시험장<br>
+			- 적성검사 지정병원<br>
+			- 필요한 서류(응시원서)는 해당장소에 구비되어 있습니다.<br>
+		</td>
+	</tr>
+	<tr>
+		<th>사진은 어디에 쓰이나요?</th>
+		<td>
+		학과시험 접수시 응시원서에 2장<br>
+		도로주행 시험합격시 면허증 발급 1장	
+		</td>
+	</tr>
+	<tr>
+		<th>운전경력증명서<br>발급</th>
+		<td>
+		경찰서 민원실 발급<br>
+		온라인(인터넷)으로 발급가능 민원24 홈페이지(www.minwon.go.kr)
+		</td>
+	</tr>	
+</table>
+</p>
+	<div class="b">※자동차운전면허시험(제1종보통,제2종)응시표(응시원서)는 적성(신체) 검사 기관에 비치되어 있습니다.</div>
+
+</body>
+</html>
