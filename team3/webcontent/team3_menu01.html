@@ -9,66 +9,73 @@
 
 /* 메인메뉴*/
 
-ul.nav {
+a {
+	text-decoration: none;
+}
+
+div.menuOutline {
+	display:inline-block;
+	width:100%;
+	border: 1px solid #f2f2f2;
+	
+}
+
+div.mainmenu {
+	text-align: center;
+	max-width: 1200px;
+    margin: auto;
+}
+
+ul.menu {
 	list-style-type: none;
+	position: relative;
 	padding: 0;
 	margin: 0;
+	
 }
 
-ul.nav > li {
-	float: left;
-	background: #fff;
-	line-height: 40px;
-		border-right: 1px solid #666;
-		position: relative;
+ul.menu > li {
+
+ 	display:inline-block;	 
+	font-weight: 300;
+    font-size: 15px;
+	text-align: center;
+	border: 1px solid #eeeeee;
+	margin-right:-7px;
+	position: relative;
+	vertical-align:middle;	
 }
 
-ul.nav > li > a {
+ul.menu > li > a {
 	color: #666;
-	text-decoration: none;
 	font-size: 20px;
 	font-weight: bold;
 	padding: 20px 40px;
 	margin: 0 3px;
+	display:block;
+	
 }			
-
-ul.nav > li > a:hover {
-	color: #fff;
-	background: #0000cd;
-}
 
 /* 서브메뉴 */
 
-ul.nav > li > ul {
+ul.menu > li > ul {
 	position: absolute;
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	width: 200px;
 	left: 10px;
+ 	width: 150px; 
 	display: block; 
 }
 
-ul.nav > li > ul > li {
+ul.menu > li > ul > li {
 	background: #fff;
-	color: #666;
-	padding-left: 20px;
 	height: 0;		
-	font-size: 15;	
-	line-height: 0;	
-	text-align: center;
-	display: none;
-}	
+	font-size: 0;
+	line-height: 0;
+}
 
-ul.nav > li:hover > ul > li {
-	height: 40px;
-	font-size: 15px;
-	line-height: 40px;
-	text-align: center;
-	display: block;
-}			
-
-ul.nav > li > ul > li > a {
+ul.menu > li > ul > li > a {
 	background: #fff;
 	color: #BBBBBB;
 	text-decoration: none;
@@ -76,7 +83,43 @@ ul.nav > li > ul > li > a {
 	display: block;
 }
 
-ul.nav > li > ul > li:hover > a {
+ul.menu > li > ul > li > a:hover {
+ 
+ 	color: black;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+ul.menu:hover > li > ul {
+	 height: 167px;
+    background-color: white;
+    border-left: 2px dotted #ccc;
+}
+
+ul.menu:hover > li > ul > li {
+	
+	height: 40px;		
+	font-size: 15px;	
+	line-height: 40px;	
+}
+
+
+ul.menu > li > a:hover {
+	color: #fff;
+	background: #0037ba;
+	transition: all 0.5s;
+}
+
+ul.menu > li:hover > ul > li {
+	height: 40px;
+	font-size: 15px;
+	line-height: 40px;
+	text-align: center;
+	display: block;
+}			
+
+
+ul.menu > li > ul > li:hover > a {
 	color: #333;
 	text-decoration: underline;
 	font-weight: bold;
@@ -84,70 +127,60 @@ ul.nav > li > ul > li:hover > a {
 	display: block;
 }	
 
-
 </style>
 
 </head>
 <body>
 
-<ul class="nav">
-	<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</li>
-	<li>
-		<a href="#">학원소개</a>
-		<ul>
-			<li><a href="#">원장 인사말</a></li>
-			<li><a href="#">학원 전경</a></li>
-			<li><a href="#">학원 위치</a></li>
-		</ul>
-	</li>
-	
-	<li>
-		<a href="#">수강안내</a>
-		<ul>
-			<li><a href="#">교육 준비물</a></li>
-			<li><a href="#">수강료</a></li>
-			<li><a href="#">교육시간</a></li>
-			<li><a href="#">응시절차</a></li>
-		</ul>
-	</li>
-	
-	<li>
-		<a href="#">면허시험안내</a>
-		<ul>
-			<li><a href="#">면허취득절차</a></li>
-			<li><a href="#">학과시험</a></li>
-			<li><a href="#">기능시험</a></li>
-			<li><a href="#">주행시험</a></li>
-		</ul>
-	</li>
-	
-	<li>
-		<a href="#">도로주행시험코스</a>
-		<ul>
-			<li><a href="#">도로주행시험코스</a></li>
-		</ul>
-	</li>
-	
-	<li>
-		<a href="#">온라인 문의</a>
-		<ul>
-			<li><a href="#">온라인 문의</a></li>
-			<li><a href="#">셔틀버스안내</a></li>
-		</ul>
-	</li>
-	
-	<li>
-		<a href="#">고객센터</a>
-		<ul>
-			<li><a href="#">공지사항</a></li>
-			<li><a href="#">자료실</a></li>
-			<li><a href="#">포토 갤러리</a></li>
-		</ul>
-	</li>
-	<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</li>
-	
-	
-</ul>
+<!-- 메인메뉴 -->
+
+<div class="menuOutline">
+<div class="mainmenu">
+	<ul class="menu">
+		<li><a href="#">학원소개</a>
+			<ul>
+				<li><a href="#">원장인사말</a></li>
+				<li><a href="#">학원전경</a></li>
+				<li><a href="#">학원위치</a></li>
+			</ul>
+		</li>
+		<li><a href="http://localhost:8088/team3/team3_01.html">수강안내</a>
+			<ul>
+				<li><a href="http://localhost:8088/team3/team3_01.html">교육준비물</a></li>
+				<li><a href="#">수강료</a></li>
+				<li><a href="#">교육시간</a></li>
+				<li><a href="#">응시절차</a></li>
+			</ul>
+		</li>
+		<li class="#"><a href="#">면허시험안내</a>
+			<ul>
+				<li><a  href="#">면허취득절차</a></li>
+				<li><a href="#">학과시험</a></li>
+				<li><a href="#">기능시험</a></li>
+				<li><a href="#">주행시험</a></li>
+			</ul>
+		</li>
+		<li><a href="#">도로주행시험코스</a>
+			<ul>
+				<li><a href="#">도로주행시험코스</a></li>
+			</ul>
+		</li>
+		<li><a href="#">온라인문의</a>
+			<ul>
+				<li><a href="#">온라인문의</a></li>
+				<li><a href="#">셔틀버스 안내</a></li>
+			</ul>
+		</li>
+		<li><a href="#">고객센터</a>
+			<ul>
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">자료실</a></li>
+				<li><a href="#">포토갤러리</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</div>
 
 </body>
 </html>
