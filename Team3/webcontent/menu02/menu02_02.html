@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>학원위치</title>
+
+<style>
+@import url('https://fonts.google.com/noto/specimen/Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+</style>
+
+<style type="text/css">
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* 헤드라인 */
+div.head{
+	text-align:center;
+}
+
+.topline {
+	background: #FFBB00;
+	height: 5px; 
+}
+
+.head-main {
+	display: flex;
+	max-width: 1200px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 30px;
+	margin: 0 auto;
+}
+
+.head-logo {
+	float: left;
+}
+
+.head-banner {
+	text-align: center;
+	float: right;
+	font-size: 30px;
+	font-weight: 700;
+	color: #000;
+}
+
+/* 메인 메뉴 */
+#main {
+	height: 62px;
+	border-top: 0.5px solid gray;
+	border-bottom: 0.5px solid gray;
+}
+
+ul.nav {
+	list-style-type: none;
+	margin: 0 auto;
+	width: 1300px;
+}
+
+ul.nav > li {
+	position: relative;
+	float: left;
+	width: 200px;
+	text-align: center;
+	position: relative;
+	border-left: 0.5px solid gray;
+	border-right: 0.5px solid gray;
+	border-collapse: collapse;
+}
+
+ul.nav > li > a {
+	color: #000;
+	
+	text-decoration: none;
+	line-height: 60px;
+	
+	font-size: 18px;
+	font-weight: bold;
+	font-family: "굴림";
+	
+	padding: 10px 15px;
+	
+	margin: 0 3px;
+}
+
+ul.nav > li > a:hover {
+	background: #0054FF;
+	color: #fff;
+}
+
+ul.nav > li > ul {
+	position: absolute;
+	
+	list-style-type: none;
+	
+	padding: 0;
+	margin: 0;
+
+	width: 200px;
+
+}
+
+ul.nav > li > ul > li {
+	background: #fff;
+
+	padding-left: 20px;
+
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+ul.nav > li:hover > ul > li {
+	height: 40px;
+	font-size: 20px;
+	line-height: 40px;
+}
+
+ul.nav > li > ul > li > a {
+
+	background: #fff;
+
+	color: #000;
+	
+	text-decoration: none;
+	
+	display: block;
+}
+
+ul.nav > li > ul > li > a:hover {
+	font-weight: bold;
+}
+
+#mainbody {
+	width: 1200px;
+	height: 750px;
+	padding: 0px 30px;
+	margin: 0px auto;
+}
+
+/* 사이드 메뉴 */
+ul.sidemenu {
+	padding: 0px;
+	margin: 0px;
+	width: 20%;
+	position: relative;
+	overflow: auto;
+}
+
+
+div#sidebar {
+	width: 240px;
+	height: 700px;
+	background-color: #fff;
+	float: left;
+	margin-right: 50px;
+}
+
+.sidebar-1 {
+	padding: 25px;
+	border-bottom: 4px solid #5F00FF;
+}
+
+
+.sidebar-2 {
+	width: 240px;
+	height: 180px;
+}
+
+
+#sidebar li {
+	text-decoration: none;
+	list-style: none;
+	padding: 18px 15px;
+	margin: 0;
+	text-align: left;
+	border-bottom: 1px solid #ccc;
+}
+
+.sidebar-2 > ul > li > a {
+	color: #000;
+}
+
+/* 본문 */
+.wrapper {
+	margin: auto;
+	float: right;
+}
+.section {
+	width: 900px;
+	display: inline-block;
+}
+
+.content {
+	position: relative;
+	float: left;
+	width: 850px;
+	height: 700px;
+	background-color: #fff;
+}
+
+.content .content-right {
+	width: 50%;
+	height: 600px;
+	float: right;
+}
+
+</style>
+
+</head>
+<body>
+
+</head>
+<body>
+
+<!-- 헤드라인 -->
+<div class="head">
+	<div class="topline">
+	</div>
+
+	<div class="head-main">
+		<div class="head-logo">
+		<img src="http://www.g-car.kr/wp-content/uploads/2020/10/logo-main.png">
+		</div>
+	
+	<div class="head-banner">
+		<span>문의전화</span><br>
+		<span style="font-size:50px;font-weight:900;color:#05339e;line-height: 50px;
+		letter-spacing: -0.06em;">1833-2122</span>
+		</div>
+	</div>
+</div>
+
+<!-- 메인 메뉴 -->
+<div id="main">
+<ul class="nav">
+	<li>
+		<a href="#">학원소개</a>
+		<ul>
+			<li><a href="#">원장 인사말</a></li>
+			<li><a href="#">학원 전경</a></li>
+			<li><a href="#">학원 위치</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="#">수강안내</a>
+		<ul>
+			<li><a href="#">교육 준비물</a></li>
+			<li><a href="#">수강료</a></li>
+			<li><a href="#">교육시간</a></li>
+			<li><a href="#">응시절차</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="#">면허시험안내</a>
+		<ul>
+			<li><a href="#">면허취득절차</a></li>
+			<li><a href="#">학과시험</a></li>
+			<li><a href="#">기능시험</a></li>
+			<li><a href="#">주행시험</a></li>
+		</ul>
+	</li>
+	
+	<li>
+		<a href="#">도로주행시험코스</a>
+		<ul>
+			<li><a href="#">도로주행시험코스</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="#">온라인 문의</a>
+		<ul>
+			<li><a href="#">온라인 문의</a></li>
+			<li><a href="#">셔틀버스안내</a></li>
+		</ul>
+	</li>
+	
+	<li>
+		<a href="#">고객센터</a>
+		<ul>
+			<li><a href="#">공지사항</a></li>
+			<li><a href="#">자료실</a></li>
+			<li><a href="#">포토 갤러리</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+<img src="http://www.g-car.kr/wp-content/uploads/2020/03/pslider-01-1.jpg">
+
+
+<!-- 사이드 메뉴 -->
+
+<div id="mainbody">
+<div class="sidemenu">
+<div id="sidebar">
+	
+	<div class="sidebar-1">
+	<h2>학원소개</h2>
+	</div>
+	
+	<div class="sidebar-2">
+		<ul>
+			<li><a href="#">원장 인사말</a>
+			<li><a href="#">학원전경</a>
+			<li><a href="#">학원위치</a>
+		</ul>
+	</div>
+	
+
+</div>
+</div>
+<!-- 본문 -->
+<div class="wrapper">
+<div class="section">
+
+	<div class="content">
+		<br>
+		<h1>학원위치</h1>
+		<br><hr>
+
+		<table>
+			<tbody>
+			<tr>
+			<td align="left" width="20%">주소</td>
+			<td align="left">경기도 김포시 김포대로 1682 (양촌읍 석모리 17-2, 모아패션아울렛앞)</td>
+			</tr>
+			
+			<tr>
+			<td align="left">연락처</td>
+			<td align="left">전화 : 1833-2122 / 메일 : gimpo3677@naver.com</td>
+			</tr>
+
+
+			</tbody>
+		</table>
+
+			<img style="width:750;"
+			alt="지도" src="../resources/image/map.jpg">
+
+			<div id="daumRoughmapContainer1602822621974" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 100%;"></div>
+			<p>
+			<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script><br />
+			<br />
+		<script charset="UTF-8">
+			new daum.roughmap.Lander({
+			"timestamp" : "1602822621974",
+			"key" : "22gyw",
+			"mapHeight" : "450",
+			"mapWidth" : "800"
+			}).render();
+
+
+		</script></p>
+		
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

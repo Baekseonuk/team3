@@ -4,7 +4,21 @@
 <meta charset="UTF-8">
 <title>학원소개</title>
 
+<style>
+@import url('https://fonts.google.com/noto/specimen/Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+</style>
+
 <style type="text/css">
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration-line: none;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 300;
+}
+
 
 /* 헤드라인 */
 div.head{
@@ -29,42 +43,46 @@ div.head{
 	float: left;
 }
 
-.head-banner {
+.head-tel {
 	text-align: center;
 	float: right;
-	font-size: 30px;
+	font-size: 35px;
 	font-weight: 700;
 	color: #000;
 }
 
 /* 메인 메뉴 */
+#main {
+	height: 62px;
+	border-top: 0.5px solid gray;
+	border-bottom: 0.5px solid gray;
+}
+
 ul.nav {
 	list-style-type: none;
-	text-align: center;
-	margin: auto;
-	position: relative;
-	max-width: 1000px;
+	margin: 0 auto;
+	width: 1300px;
 }
 
 ul.nav > li {
-	display:inline-block;
-	background: #ffffff;
-	line-height: 60px;
-	border: 1px solid #D5D5D5;
 	position: relative;
-	font-weight: 500;
-	font-size: 20px;
+	float: left;
+	width: 200px;
 	text-align: center;
+	position: relative;
+	border-left: 0.5px solid gray;
+	border-right: 0.5px solid gray;
+	border-collapse: collapse;
 }
 
 ul.nav > li > a {
 	color: #000;
 	
 	text-decoration: none;
+	line-height: 60px;
 	
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: bold;
-	font-family: "굴림";
 	
 	padding: 10px 15px;
 	
@@ -74,8 +92,10 @@ ul.nav > li > a {
 ul.nav > li > a:hover {
 	background: #0054FF;
 	color: #fff;
+	transition: all 0.5s;
 }
 
+/* 서브 메뉴 */
 ul.nav > li > ul {
 	position: absolute;
 	
@@ -90,17 +110,21 @@ ul.nav > li > ul {
 
 ul.nav > li > ul > li {
 	background: #fff;
-
-	padding-left: 20px;
-
+	
 	height: 0;
 	font-size: 0;
 	line-height: 0;
 }
 
-ul.nav > li:hover > ul > li {
+ul.nav:hover >li >ul {
+	height: 167px;
+    background-color: white;
+    border-left: 2px dotted #ccc;
+}
+
+ul.nav:hover > li > ul > li {
 	height: 40px;
-	font-size: 20px;
+	font-size: 15px;
 	line-height: 40px;
 }
 
@@ -116,7 +140,169 @@ ul.nav > li > ul > li > a {
 }
 
 ul.nav > li > ul > li > a:hover {
-	font-weight: bold;
+	color: black;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+/* 사이드 메뉴 */
+#sidemain {
+	width: 1200px;
+	height: 750px;
+	padding: 0px 30px;
+	margin: 0px auto;
+}
+
+ul.sidemenu {
+	padding: 0px;
+	margin: 0px;
+	width: 20%;
+	position: relative;
+	overflow: auto;
+}
+
+
+div#sidebar {
+	width: 240px;
+	height: 700px;
+	background-color: #fff;
+	float: left;
+	margin-right: 50px;
+}
+
+.sidebar-1 {
+	padding: 25px;
+	border-bottom: 4px solid #5F00FF;
+}
+
+
+.sidebar-2 {
+	width: 240px;
+	height: 180px;
+}
+
+
+#sidebar li {
+	text-decoration: none;
+	list-style: none;
+	padding: 18px 15px;
+	margin: 0;
+	text-align: left;
+	border-bottom: 1px solid #ccc;
+}
+
+.sidebar-2 > ul > li > a {
+	color: #000;
+}
+
+/* 온라인 상담신청 */
+
+#widget {
+	background: #e8e8e8;
+    padding: 1px 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+#widget p {
+	margin: 17px 0px;
+}
+
+#widget-text input {
+	vertical-align: middle;
+	background-color: #ffffff;
+	border: 1px solid #d2d2d2;
+	font-size: 12px;
+	color: #707070;
+ 	
+ 	height: 50px;
+ 	padding: 0px 15px;
+}
+
+#widget-name {
+	margin-right: 5px;
+	margin-bottom: 6px;
+	float: left;
+}
+
+#widget-tel {
+	margin-bottom: 6px;
+	float: left;
+}
+
+#widget-memo {
+	width: 182px;
+    float: left;
+    margin-bottom: 6px;
+}
+
+#widget-chkbox {
+	margin-top: 5px;
+    margin-bottom: 6px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+    color: black;
+    font-size: 12px;
+}
+
+#widget-chkbox a {
+	color: black;
+	text-decoration: underline;
+}
+
+#widget-submit input {
+	background: #ff9800;
+    color: #ffffff;
+    padding: 11px 23px;
+    line-height: 16px;
+    font-size: 13px;
+    font-style: normal;
+    border-color: #ff9800;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 0px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#widget-submit input:hover {
+	background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+/* 배너 */
+
+.banner {
+	background-image: url("http://www.g-car.kr/wp-content/uploads/2020/03/pslider-01-1.jpg");
+	background-position:center;
+	background-size: 100%;
+	text-align: center;
+	color : white;
+	width: 100%; 
+	height: 300px;
+	position:relative;
+	z-index:-999;
+}
+
+div.banner div{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -300px;
+	margin-top: -30px;
+}
+div.banner div p:nth-child(1) {
+	font-size: 20px;
+	font-weight: 400;
+}
+div.banner div p:nth-child(2) {
+	
+	font-size: 30px;
+	font-weight: 500;
 }
 
 /* 본문 */
@@ -125,18 +311,56 @@ ul.nav > li > ul > li > a:hover {
 	float: right;
 }
 .section {
-	width: 1200px;
+	width: 900px;
 	display: inline-block;
 }
 
 .content {
 	position: relative;
-	float: right;
+	float: left;
+	width: 850px;
+	height: 700px;
+	background-color: white;
 }
 
 .content .content-right {
-	width: 70%;
+	width: 60%;
 	height: 600px;
+	float: right;
+}
+
+/* footer */
+.footer {
+	margin: 0 auto;
+	background-color: #e0e0e0;
+	padding-bottom: 10px;
+}
+
+#footer-menu {
+	padding: 10px 30px;
+	margin: 0 auto;
+	width: 1200px;
+}
+#footer-menu li {
+	display: inline-block;
+	position: relative;
+}
+#footer-menu a {
+	padding: 3px 10px;
+	margin: 16px 0px;
+	border-left: 1px solid #ccc; 
+	color: black;
+	font-size: 15px;
+	text-align: left;
+ 	vertical-align: middle;
+}
+#footer-bottom {
+	padding-top: 40px;
+	padding-bottom: 50px;
+	margin: 0 auto;
+	width: 1200px;
+}
+#qr-img {
 	float: right;
 }
 
@@ -145,16 +369,17 @@ ul.nav > li > ul > li > a:hover {
 </head>
 <body>
 
+<!-- 헤드라인 -->
 <div class="head">
 	<div class="topline">
 	</div>
 
 	<div class="head-main">
 		<div class="head-logo">
-		<img src="http://www.g-car.kr/wp-content/uploads/2020/10/logo-main.png">
+		<img src="../resources/image/logo-main.png">
 		</div>
 	
-	<div class="head-banner">
+	<div class="head-tel">
 		<span>문의전화</span><br>
 		<span style="font-size:50px;font-weight:900;color:#05339e;line-height: 50px;
 		letter-spacing: -0.06em;">1833-2122</span>
@@ -162,8 +387,8 @@ ul.nav > li > ul > li > a:hover {
 	</div>
 </div>
 
-
-
+<!-- 메인 메뉴 -->
+<div id="main">
 <ul class="nav">
 	<li>
 		<a href="#">학원소개</a>
@@ -218,22 +443,82 @@ ul.nav > li > ul > li > a:hover {
 		</ul>
 	</li>
 </ul>
-
-<div class="background background-image" style="background-image: url(http://www.g-car.kr/wp-content/uploads/2020/03/pslider-01-1.jpg);max-width:100%;height:300px;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.g-car.kr/wp-content/uploads/2020/03/pslider-01-1.jpg', sizingMethod='scale');">
 </div>
 
+<!-- 배너 -->
+<div class="banner">
+	<div>
+		<p>G I M P O&nbsp;&nbsp;&nbsp;&nbsp;D R I V I N G&nbsp;&nbsp;&nbsp;&nbsp;A C A D E M Y</p>
+		<p>빠르고 완벽하게! 김포자동차 운전전문학원</p>	
+	</div>
+</div>
+
+<!-- 사이드메뉴 -->
+<div id="sidemain">
+	<div class="sidemenu">
+	<div id="sidebar">
+	
+		<div class="sidebar-1">
+		<h2>학원소개</h2>
+		</div>
+	
+		<div class="sidebar-2">
+			<ul>
+				<li><a href="#">원장 인사말</a>
+				<li><a href="#">학원전경</a>
+				<li><a href="#">학원위치</a>
+			</ul>
+		</div>
+	
+
+	<!-- 온라인 상담신청 -->
+	<div id="widget">
+		<p>
+			<span style="font-size: 22px; font-weight: bold;">온라인 상담신청</span>
+			<br>
+			<span style="font-size: 15px; font-weight: 300; line-height: 18px; display: inline-block;">연락처를 남겨주시면 빠르고 친절하게 교육과정에 대해서 상담해드리겠습니다.</span>
+		</p>
+		<div id="widget-text">
+		<div id="widget-name">
+				<input type="text" placeholder="이름" style="width: 75px;">
+			</div>
+			
+			<div id="widget-tel">
+				<input type="text" placeholder="전화번호" style="width: 75px;">
+			</div>
+			
+			<div id="widget-memo">
+				<input type="text" placeholder="간단 내용 입력 후 동의."  style="width: 188px;">
+			</div>	
+		
+			<div id="widget-chkbox">
+				<input type="checkbox"><a href="#">개인정보취급방침</a><span>에 동의.(필수)</span>
+			</div>
+				
+			<div id="widget-submit">
+				<input type="submit" value="상담신청하기">
+			</div>
+		
+		</div>
+	
+	</div>
+	</div>
+</div>
+
+<!-- 본문 -->
 <div class="wrapper">
 <div class="section">
 
 	<div class="content">
-		<h1>원장 인사말</h1>
-		<hr>
 		<br>
-		<h2>쾌적한시설 및 환경! 편하고 빠르고 완벽하게!</h2>
-		<h2>경험많은 강사진이 여러분의 합격을 위해 최선을 다합니다.</h2>
+		<p style="font-size: 30px; font-weight: bold;">원장 인사말</p>
+		<br><hr>
+		<br><br>
+		<p style="font-size: 25px;">쾌적한시설 및 환경! 편하고 빠르고 완벽하게!</p>
+		<p style="font-size: 25px;">경험많은 강사진이 여러분의 합격을 위해 최선을 다합니다.</p>
 		<br>
-		<h3>안녕하십니까?  김포 자동차운전전문학원의 홈페이지 방문을 환영하며 인사드립니다.</h3>
-		<br>
+		<p style="font-size: 20px;">안녕하십니까?  김포 자동차운전전문학원의 홈페이지 방문을 환영하며 인사드립니다.</p>
+		<br><br>
 		<hr>
 
 			<img	style="width:300px;
@@ -244,20 +529,62 @@ ul.nav > li > ul > li > a:hover {
 					alt="학원" src="../resources/image/img_01.jpg">
 
 	<div class="content-right">
-
+		<br>
 		<p>김포 자동차운전전문학원은 최신 시설의 학과 강의실과 탁 트인 넓고 쾌적한 교육장을 조성하고 수강생들의 시청각교육과 전담 맞춤교육으로 경기도 서북부 및 인천생활권의 수요자 중심의 니즈에 부합할 수 있도록 운전면허 취득에 필요한 양질의 교육서비스를 제공하고 있습니다.</p>
+		<br>
 
 		<p>아울러 고객의 만족도를 극대화시키는 궁극적인 목적의식을 가지고 늘 안전하고 현실성 있는 참교육의 메카로 자리메김 되도록 수강생 여러분을 가족처럼 생각하고 올바른 교육이 전수될 수 있도록 형식보다는 실질과 내실 있는 교육을 추구하겠습니다</p>
-
-		<h4>저희 학원을 선택하고 찾아주시는 분들에게 오래도록 기억될 수 있는 친근한 김포 자동차운전전문학원이 되겠습니다.</h4>
-
-		<p>김포 자동차운전전문학원</p> <h4>원장 김 봉 주</h4>
+		<br>
+		
+		<p style="font-weight: bold;">저희 학원을 선택하고 찾아주시는 분들에게 오래도록 기억될 수 있는 친근한 김포 자동차운전전문학원이 되겠습니다.</p>
+		<br>
+		
+		<p>김포 자동차운전전문학원</p><p style="font-size:25px; font-weight:bold;"> 원장 김 봉 주</p>
 
 	</div>
 	</div>
 </div>
 </div>
+</div>
 
+<!-- footer -->
+<footer>
+<div class="footer">
+	<div id="footer-menu">
+		<br>
+		<ul>
+			<li><a href="#">개인정보취급방침</a></li>
+			<li><a href="#">학원소개</a></li>
+			<li><a href="#">수강안내</a></li>
+			<li><a href="#">면허시험안내</a></li>
+			<li><a href="#">도로주행시험코스</a></li>
+			<li><a href="#">온라인문의</a></li>
+			<li><a href="#">고객센터</a></li>
+		</ul>	
+		<br>
+	</div>
+	
+	<hr>
+	
+	<div id="footer-bottom">
+		<div id="qr-img">
+			<img alt="qr" src="../resources/image/qr.gif">
+		</div>
+		<div>
+			<a href="#" style="font-size: 28px; color: black; font-weight: bold;">(주)김포자동차운전전문학원</a>
+		</div>
+		
+		<div>
+			<p style="font-size: 15px;">학원코드: 13613 / 지정번호: 20-07호 / 사업자번호 : 614-86-02418 / 업종 : 교육서비스업(운전학원) / 대표 : 홍성우</p>
+			<p style="font-size: 15px;">경기도 김포시 김포대로 1682(양촌읍 석모리 17-2, 모아패션아울렛앞) / Tel.1833-2122</p><br>
+		</div>
+	
+		<div>
+			<p style="font-size: 12px;">Copyright 2022 김포자동차운전전문학원 | All Rights Reserved</p>
+		</div>
+	</div>
+</div>
+</footer>
 
 
 </body>
