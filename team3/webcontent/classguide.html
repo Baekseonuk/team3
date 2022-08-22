@@ -9,8 +9,8 @@
 /* header */
 
 #header {
-	background-color: orange;
-	height: 6px;
+	background-color: #ffa500;
+	height: 5px;
 	border: 0;
 }
 
@@ -120,7 +120,7 @@ ul.menu > li > ul > li > a:hover {
 
 ul.menu:hover > li > ul {
 	 height: 167px;
-    background-color: white;
+    background-color: #fff;;
     border-left: 2px dotted #ccc;
 }
 
@@ -157,7 +157,55 @@ ul.menu > li > ul > li:hover > a {
 
 /* pslider */
 
+.pslider_wrap {
+	width: 100%;
+	margin: auto;
+	position: relative;
+}
 
+.pslider {
+	background-image: url("/image/pslider.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	vertical-align: middle;
+	max-width : 100%; 
+	height: 300px;
+
+}
+
+.pslider_text {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	position: absolute;
+	text-align: center;
+	transform: translate(200%, -250%);
+	color: #fff;
+	    
+}
+
+#p-1 {
+	letter-spacing: 0.55em;
+	font-weight: 500;
+	text-shadow: 1px 1px 30px rgb(0 0 0 / 60%);
+	margin: 0px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 1.2;
+    font-Size: 18;
+}
+
+#p-2 {
+	letter-spacing: -0.06em;
+    text-shadow: 0px 0px 10px rgb(0 0 0 / 80%);
+    margin: 0px;
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    line-height: 1.2;
+    font-size: 32;
+}
 
 
 /* page */
@@ -275,14 +323,16 @@ div.b {
 
 <!-- pslider -->
 
-<a href="#"><img src="image/pslider.jpg"></a>
+<div class="pslider_wrap">
+<div class="plsider">
+	<a href="#"><img src="image/pslider.jpg"></a>
+</div>
 
-<div class="pslider">
-	<div>
-		<p>G I M P O  D R I V I N G  A C A D E M Y</p>
-		<p>빠르고 완벽하게! 김포자동차 운전전문학원</p>	
-	</div>
-	
+<div class="pslider_text">   
+   	<p id="p-1">GIMPO DRIVING ACADEMY</p> 
+   	<br> 
+   	<span id="p-2">빠르고 완벽하게! 김포자동차운전전문학원</span>
+</div>
 </div>
 
 <!-- page -->
