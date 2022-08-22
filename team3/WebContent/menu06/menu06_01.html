@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>온라인 문의 - 김포자동차전문학원</title>
 
 <style type="text/css">
 *{
@@ -32,12 +32,13 @@
 	height: 89px;
 }
 
-.font1{
+
+#number p:nth-child(1){
 	font-size: 30px;
 	font-weight: 700;
 	text-align: center;
 }
-.font2{
+#number span:nth-child(2){
 	font-size: 50px;
 	font-weight: 900;
 	color: #05339e;
@@ -51,8 +52,8 @@
 /* 메뉴 */
 #main-menu{
 	height: 62px;
-	border-top: 1px solid gray;
-	border-bottom: 1px solid gray;
+	border-top: 1px solid #d2d2d2;
+	border-bottom: 1px solid #d2d2d2;
 
 	
 	
@@ -74,8 +75,9 @@ ul.nav > li {
 	float:left;
 	width: 200px;
 	text-align: center;
-	border-left: 1px solid gray;
-	border-right: 1px solid gray;
+	border-left: 1px solid #d2d2d2;
+	border-right: 1px solid #d2d2d2;
+	border-bottom: 1px solid #d2d2d2;
 	border-collapse: collapse; /* 겹치는선 하나로 */
 	
 	/* 서브메뉴의 위치 기준점 설정 */
@@ -96,10 +98,12 @@ ul.nav > li > a {
 ul.nav > li > ul{
 	position: absolute;
 	width: 200px; /* 서브 메뉴 영역의 너비 텍스트 줄바꿈 없앰 */
+	padding: 0;
+	margin: 0;
 	
 	list-style-type: none; /* 리스트 스타일 제거 */
 	
-	display: none;
+	
 }
 /* 서브메뉴 항목 */
 ul.nav > li > ul > li {
@@ -107,10 +111,36 @@ ul.nav > li > ul > li {
 	line-height: 40px;
 	
 	 /* 서브메뉴 숨기기 */
+	height: 0;		
+	font-size: 0;
+	line-height: 0;
 }
+
+ul.nav > li > ul > li > a{
+	background-color: white; 
+	text-decoration: none;
+	color: gray;
+	display: block;
+}
+
+ul.nav > li > ul > li >a:hover {
+ 
+	/* 글자색 변경 */
+	color: black;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
 /* 메인 메뉴 항목에 마우스 올릴 경우 메인메뉴 배경 파란색 */
 ul.nav > li:hover{
 	background-color: #0a31b5;
+}
+
+#now{
+	background-color: #0a31b5	
+}
+#now-font{
+	color: #fff;
 }
 /* 메인메뉴 항목에 마우스 올릴경우 메인메뉴 텍스트 글자색 흰색 */
 ul.nav > li:hover > a{
@@ -118,10 +148,144 @@ ul.nav > li:hover > a{
 }
 
 /* 메인메뉴 항목에 마우스 올릴경우 서브메뉴가 보임*/
-ul.nav > li:hover > ul {
-	display: block;
+ul.nav:hover > li > ul > li {
 	line-height: 30px;
 	background-color: white;
+	height: 40px;		
+	font-size: 15px;	
+	line-height: 40px;
+}
+ul.nav:hover >li >ul {
+	height: 167px;
+    background-color: white;
+    border-left: 1px dotted #ccc;
+}
+
+/* 배너 */
+#banner{
+	background-image: url(../resources/banner.jpg);
+	color: #fff;
+	height: 300px;
+	text-align: center;
+	
+	/* 배경 이미지 크기 자동 조절 */
+	background-position: center;
+ 	background-size: cover;
+	
+	
+}
+#banner span:nth-child(1){
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 0.55em; /* 글자 간격 */
+	line-height: 45px;
+	
+}
+#banner span:nth-child(3){
+	font-size: 32px;
+	letter-spacing: -0.06em;
+	
+}
+
+/* section-wrap */
+#section-wrap{
+	padding: 0 30px;
+	margin: 0 321px;
+	width: 1200px;
+	
+}
+
+/* 메인 컨텐츠 */
+#content{
+	float: right;
+	margin: 0;
+	padding: 30px 0 100px 0 ;
+	width: 65%;
+}
+
+#content h3:nth-child(1){
+	font-size: 30px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 70px;
+}
+
+textarea{
+	width: 855px;
+}
+
+.agree{
+	border-top: 10px solid #ececec;
+	border-left: 10px solid #ececec;
+	border-right: 10px solid #ececec;
+	border-bottom: 1px solid #eee;
+	color: #707070;
+}
+#agreechk{
+	height: 50px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #676666;
+	text-align: center;
+	line-height: 50px;
+}
+
+[type~="text"]{
+	padding: 0 15px;
+    height: 57px;
+    background-color: #ffffff;
+    font-size: 13px;
+    color: #707070;
+    border-width: 1px;
+    border-color: #eeeeee;
+    border-radius: 0px;
+}
+/* 첫번째 텍스트 박스 줄 */
+.first{
+	width: 20%;
+	margin-bottom: 20px;
+}
+.rMargin{
+	margin-right: 9.7px;
+}
+
+/* 두번째 텍스트박스 줄 */
+.second{
+	width: 848px;
+	margin-bottom: 40px;
+}
+
+/* 세번째 textarea 줄 */
+.third{
+	padding: 8px 15px;
+	width: 848px;
+}
+
+/* 보내기 버튼 */
+[type~="submit"]{
+	background: #ff9800;
+    color: #ffffff;
+    border-color: #ff9800;
+    padding: 11px 23px;
+    line-height: 16px;
+    font-size: 13px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 400px;
+}
+
+/* 사이드 */
+
+#side{
+	width: 20%;
+	float: left;
+}
+
+#side-head{
+	font-size: 25px;
+	margin-top: 28px;
+	padding: 18px;
+	border-bottom: 4px solid #0a31b5;
 }
 
 
@@ -135,8 +299,8 @@ ul.nav > li:hover > ul {
 		<div id="title">
 			<div id="logo"><img class="logo" alt="김포 자동차 전문학원" src="../resources/logo_main.png"></div>
 			<div id="number">
-				<p class="font1">문의전화</p>	
-				<p class="font2">1833-2122</p>	
+				<p>문의전화</p>	
+				<span>1833-2122</span>	
 			</div>
 		</div>
 		
@@ -145,60 +309,97 @@ ul.nav > li:hover > ul {
 				<li>
 					<a href="#">학원소개</a>
 					<ul>
-						<li>원장 인사말</li>
-						<li>학원 전경</li>
-						<li>학원 위치</li>
+						<li><a href="#">원장 인사말</a></li>
+						<li><a href="#">학원 전경</a></li>
+						<li><a href="#">학원 위치</a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="#">수강안내</a>
 					<ul>
-						<li>교육 준비물</li>
-						<li>수강료</li>
-						<li>교육시간</li>
-						<li>응시절차</li>
+						<li><a href="#">교육 준비물</a></li>
+						<li><a href="#">수강료</a></li>
+						<li><a href="#">교육시간</a></li>
+						<li><a href="#">응시절차</a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="#">면허시험안내</a>
 					<ul>
-						<li>면허취득절차</li>
-						<li>학과시험</li>
-						<li>기능시험</li>
-						<li>주행시험</li>
+						<li><a href="#">면허취득절차</a></li>
+						<li><a href="#">학과시험</a></li>
+						<li><a href="#">기능시험</a></li>
+						<li><a href="#">주행시험</a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="#">도로주행시험코스</a>
 					<ul>
-						<li>도로주행시험코스</li>
+						<li><a href="#">도로주행시험코스</a></li>
 					</ul>
 				</li>
-				<li>
-					<a href="#">온라인 문의</a>
+				<li id="now">
+					<a id="now-font" href="#">온라인 문의</a>
 					<ul>
-						<li>온라인 문의</li>
-						<li>셔틀버스안내</li>
+						<li><a href="#">온라인 문의</a></li>
+						<li><a href="#">셔틀버스안내</a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="#">고객센터</a>
 					<ul>
-						<li>공지사항</li>
-						<li>자료실</li>
-						<li>포토 갤러리</li>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">자료실</a></li>
+						<li><a href="#">포토 갤러리</a></li>
 					</ul>
 				</li>
 				
 			</ul>
 		</div>
-		
-		
 	</div>
 	<div id="banner">
-		<img alt="배너" src="../resources/banner.jpg">
+		<span>GIMPO DRIVING ACADEMY</span><br>
+		<span>빠르고 완벽하게! 김포자동차운전전문학원</span>
 	</div>
-	<div id="main"></div>
+	<div id="section-wrap">
+		<div id="content">
+			<h3>온라인 문의</h3>
+			<form>
+				<textarea class="agree" rows="10" cols="100%">■ 수집하는 개인정보 항목
+회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+수집항목 : 이름, 성별, 로그인ID, 비밀번호, 비밀번호 질문과 답변, 자택 전화번호, 자택 주소, 휴대전화번호, 이메일, 결제기록
+개인정보 수집방법 : 홈페이지(회원가입)
+■ 개인정보의 수집 및 이용목적
+회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산
+콘텐츠 제공 , 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송 , 금융거래 본인 인증 및 금융 서비스
+회원 관리
+회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 불량회원의 부정 이용 방지와 비인가 사용 방지 , 가입 의사 확인 , 연령확인 , 불만처리 등 민원처리 , 고지사항 전달
+마케팅 및 광고에 활용
+이벤트 등 광고성 정보 전달 , 접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계
+■ 개인정보의 보유 및 이용기간
+원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 아래와 같이 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다.
+보존 항목 : 결제기록
+보존 근거 : 계약 또는 청약철회 등에 관한 기록
+보존 기간 : 3년
+계약 또는 청약철회 등에 관한 기록 : 5년 (전자상거래등에서의 소비자보호에 관한 법률)
+대금결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래등에서의 소비자보호에 관한 법률)
+소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래등에서의 소비자보호에 관한 법률)								
+				</textarea>
+				<div id=agreechk>개인정보 취급방침에 동의하십니까? &nbsp <input type="checkbox">동의함</div>
+				<div style="padding:20px;"></div>
+				<input class="rMargin first" type="text" placeholder="이름 또는 회사명">
+				<input class="rMargin first" type="text" placeholder="메일">
+				<input class="first" type="text" placeholder="휴대전화번호">
+				<input class="second" type="text" placeholder="제목">
+				<textarea class="third" rows="10" cols="40" placeholder="내용"></textarea>
+				<input type="submit" value="보내기">
+			</form>
+		</div>
+		<div id="side">
+			<h4 id="side-head">온라인 문의</h4>
+		</div>
+	</div>
 	<div id="footer"></div>
 
 </div>
