@@ -192,6 +192,7 @@ ul.nav:hover >li >ul {
 	padding: 0 30px;
 	margin: 0 321px;
 	width: 1200px;
+	height: 910px;
 	
 }
 
@@ -200,7 +201,7 @@ ul.nav:hover >li >ul {
 	float: right;
 	margin: 0;
 	padding: 30px 0 100px 0 ;
-	width: 65%;
+	width: 75%;
 }
 
 #content h3:nth-child(1){
@@ -211,7 +212,7 @@ ul.nav:hover >li >ul {
 }
 
 textarea{
-	width: 855px;
+	width: 98%;
 }
 
 .agree{
@@ -242,7 +243,7 @@ textarea{
 }
 /* 첫번째 텍스트 박스 줄 */
 .first{
-	width: 20%;
+	width: 250px;
 	margin-bottom: 20px;
 }
 .rMargin{
@@ -259,19 +260,25 @@ textarea{
 .third{
 	padding: 8px 15px;
 	width: 848px;
+	border-width: 1px;
+    border-color: #eeeeee;
+    border-radius: 0px;
 }
 
 /* 보내기 버튼 */
+#content [type~="submit"]{
+    padding: 11px 23px;
+    line-height: 16px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 400px;
+}
+
 [type~="submit"]{
 	background: #ff9800;
     color: #ffffff;
     border-color: #ff9800;
-    padding: 11px 23px;
-    line-height: 16px;
     font-size: 13px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    margin-left: 400px;
 }
 
 /* 사이드 */
@@ -286,6 +293,65 @@ textarea{
 	margin-top: 28px;
 	padding: 18px;
 	border-bottom: 4px solid #0a31b5;
+}
+
+/* 사이드 박스부분 */
+#sidebox{
+	margin: 20px 0 50px 0;
+	padding: 10px 10px;
+	background: #e8e8e8;
+	height: 355px;
+	
+}
+.side-list{
+	list-style: none;
+	width: 210px;
+	padding: 18px 15px;
+	font-size: 17px;
+	font-weight: 300;
+	border-bottom: 1px solid #e7e6e6;
+	
+	
+}
+
+
+.sideTextBox{
+	margin: 12px 0 5px 0;
+	padding: 0 15px;
+	height: 57px;
+	width: 75px;
+    background-color: #ffffff;
+    font-size: 13px;
+    color: #707070;
+    border: 1px solid #d2d2d2;
+    
+
+}
+
+.widthTextBox{
+	padding: 0 15px;
+	height: 57px;
+	background-color: #ffffff;
+    font-size: 13px;
+    color: #707070;
+    border: 1px solid #d2d2d2;
+    width: 188px;
+    
+}
+#sidebox input:nth-last-child(2){
+	margin-left: 15px;
+}
+
+#sidebox p{
+	font-size: 12px;
+	display: inline-block;
+}
+
+[value~="상담신청하기"]{
+	line-height: 16px;
+	padding: 11px 23px;
+	height: 38px;
+	margin-top: 5px;
 }
 
 
@@ -398,6 +464,22 @@ textarea{
 		</div>
 		<div id="side">
 			<h4 id="side-head">온라인 문의</h4>
+			<ul>
+				<li class="side-list">온라인 문의</li>
+				<li class="side-list">셔틀버스 안내</li>				
+			</ul>
+			<div id="sidebox">
+				<span style="font-size: 22px; color: #000; font-weight: bold;">온라인 상담신청</span><br>
+				<span style="font-size: 15px; color: #000; line-height: 18px;">연락처를 남겨주시면 빠르고 친절하게 교육과정에 대해서 상담해드리겠습니다.</span>
+				<input class="sideTextBox" type="text" placeholder="이름">
+				<input class="sideTextBox" type="text" placeholder="전화번호">
+				<input class="widthTextBox"type="text" placeholder="간단 내용 입력 후 동의">
+				<input type="checkbox">
+				<p>
+					<a href="#">개인정보취급방침</a>에동의필수
+				</p>
+				<input type="submit" value="상담신청하기">
+			</div>
 		</div>
 	</div>
 	<div id="footer"></div>
