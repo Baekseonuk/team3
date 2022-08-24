@@ -63,6 +63,7 @@ ul li{
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 #MenuInline {
@@ -196,7 +197,7 @@ a {
 /* 슬라이드 조절 button */
 
 
-/* -------------------------------- 중간 링크 메뉴 ---------------------------------- */
+/* -------------------------------- 중간 링크 메뉴 css ---------------------------------- */
 
 .middleImg {
 	width: 386px;
@@ -300,13 +301,14 @@ td:hover {
 	background-image: url('images/banner06.jpg')
 }
  
-/* -------------------------------- 블루 라인 ---------------------------------- */
+/* -------------------------------- 블루 라인 css ---------------------------------- */
 
 #blueLine {
 	width: 100%;
 	height: 227px;
 	
 	margin-top: 100px;
+	padding-top: 35px;
 	
 	background-color: #27579e;
 	
@@ -314,11 +316,15 @@ td:hover {
 	
 	display: flex;
 	box-sizing: border-box;
-	justify-content: space-evenly;
+	align-items: baseline;
+	justify-content: center;
 }
-#blueMargin01 { margin: 40px 20px 50px 70px; }
+#blueMargin01 { padding-right: 80px; border-right: 1px dotted #bbb; }
 
-#blueMargin02 { margin-top: 30px; }
+#blueMargin02 { margin-left: 20px; }
+
+#blueMargin03 { margin-left: 20px; }
+
 
 #bText01 { font-size: 30px; letter-spacing: -3px;}
 
@@ -331,6 +337,45 @@ td:hover {
 #bText04 { font-size: 30px; font-family: 'NotoSansKR-Black'; line-height: 65px; }
 
 #bText05 { font-weight: 700; letter-spacing: -1px; }
+
+#inputName { width: 100px; height: 40px; padding-left: 10px; font-size: 12px; font-weight: 600; color: #888; }
+
+#inputTell { width: 160px; height: 40px; padding-left: 10px; margin-left: -1px; font-size: 12px; font-weight: 600; color: #888; }
+
+#inputContent { width: 278px; height: 40px; padding-left: 10px; margin-top: 5px; font-size: 12px; font-weight: 600; color: #888; }
+
+#inlBlk { display: inline-block; }
+
+#adviceBtn { font-size: 12px; font-weight: 600; letter-spacing: -1px; background: orange; margin-left: 0 40px 0 10px; padding: 7px 12px; }
+
+#checkText { font-size: 12px; font-weight: 600; letter-spacing: -1px; margin: 10px 20px; }
+
+/* -------------------------------- footer css ---------------------------------- */
+
+#footer { 
+	display: flex;
+	height: 80px;
+	background: #ddd;
+	justify-content: center;
+	align-items: center;
+}
+
+#bottom { width: 1200px; float: left; border-bottom: 1px solid #aaa; padding: 23px 0 23px 0; }
+
+#bottom > nav > ul > li { float: left; font-size: 15px; border-left: 1px solid #aaa; padding: 5px; }
+
+#lastBorder { border-right: 1px solid #aaa; }
+
+#lastFooter { background: #ddd; height: 210px; display: flex; align-items: center; justify-content: center; }
+
+#lastBottom { width: 1115px; }
+
+#company { font-size: 28px; font-weight: 600; letter-spacing: -0.03em; }
+
+.cpInfo { font-size: 16px; letter-spacing: -0.03em; }
+
+.cpMargin { padding-bottom: 15px; letter-spacing: -0.03em; }
+
 
 </style>
 
@@ -500,11 +545,12 @@ window.onload = function() {
 </table>
 </div>
 
+<!-------------------------------- 하단 안내 html ------------------------------------->
+
 
 <div id="blueLine">
 	<div id="blueMargin01">
-		<span id="bText01">김포자동차</span>
-		<span id="bText02">운전전문학원</span>
+		<span id="bText01">김포자동차</span> <span id="bText02">운전전문학원</span>
 		<p id="call">1833-2122</p>
 		<p id="bText03">매일 월~금 오전 9시 ~ 오후 6시</p>
 	</div>
@@ -513,19 +559,46 @@ window.onload = function() {
 		<p id="bText05">연락처를 남겨주시면 빠르고 친절하게<br>교육과정에 대해서 상담해드리겠습니다.</p>
 	</div>
 	<div id="blueMargin03">
-		<input type="text" value="이름" name="name" />
-		<input type="text" value="전화번호" name="name" />
+		<input type="text" id="inputName" value="이름" />
+		<input type="text" id="inputTell" value="전화번호" />
 		<span id="adviceBtn">상담신청하기</span>
-		<p><input type="text" value="간단 내용 입력후 동의." name="name" /></p>
+		<p><input type="text" id="inputContent" value="간단 내용 입력후 동의." /></p>
 		<p id="checkText"><input type="checkbox" />개인정보취급방침에 동의.(필수)</p>
 	</div>
 </div>
 
-<br>d<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!-------------------------------- footer html ------------------------------------->
+
+<div id="footer">
+	<footer id="bottom">
+	<nav>
+		<ul>
+			<li><a href="#">개인정보취급방침</a></li>
+			<li><a href="#">학원소개</a></li>
+			<li><a href="#">수강안내</a></li>
+			<li><a href="#">면허시험안내</a></li>
+			<li><a href="#">도로주행시험코스</a></li>
+			<li><a href="#">온라인문의</a></li>
+			<li id="lastBorder"><a href="#">고객센터</a></li>
+		</ul>
+	</nav>
+	</footer>
+</div>
+
+<div id="lastFooter">
+	<footer id="lastBottom">
+	<div>
+		<div id="company">(주)김포자동차운전전문학원</div>
+		<div class="cpInfo">학원코드: 13613 / 지정번호: 20-07 / 사업자번호: 614-86-02418 / 업종: 교육서비스업(운전학원) / 대표: 홍성우</div>
+		<div class="cpInfo cpMargin">경기도 김포시 김포대로 1682 (양촌읍 석모리 17-2, 모아패션아울렛앞) / Tel. 1833-2122</div>
+		<small>Copyright 2022 김포자동차운전전문학원</small>
+		<small>All Rights Reserved</small>
+	</div>
+	</footer>
+	<div><img src="images/qr.gif"></div>
+</div>
+
 
 </body>
 </html>
