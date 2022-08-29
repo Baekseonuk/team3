@@ -10,6 +10,9 @@
 	padding: 0;
 }
 
+a{
+	text-decoration: none;
+}
 
 #orangeline{
 	height: 5px;
@@ -87,7 +90,6 @@ ul.nav > li {
 ul.nav > li > a {
 	font-size: 18px;
 	font-weight: 700;
-	text-decoration: none; /* 밑줄 제거 */
 	color: black;
 	line-height: 60px;	/* 수직 정렬 */
 	
@@ -200,7 +202,7 @@ ul.nav:hover >li >ul {
 #content{
 	float: right;
 	margin: 0;
-	padding: 30px 0 100px 0 ;
+	padding: 30px 0 0 0 ;
 	width: 75%;
 }
 
@@ -354,6 +356,48 @@ textarea{
 	margin-top: 5px;
 }
 
+/* footer 부분 */
+#footer{
+	background-color: #e0e0e0;
+	height: 285px;
+}
+
+#footer-top{
+	width: 1200px;
+	margin: 0 auto;
+	padding: 10px 30px;
+	
+	border-bottom: 1px solid #a9a4a4;
+}
+
+
+span.policy{
+	padding: 3px 10px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: inline-block;
+    margin-left: -1px;
+
+}
+span.right{
+
+	border-right: 1px solid #a9a4a4;
+}
+span.both{
+
+	border-right: 1px solid #a9a4a4;
+    border-left: 1px solid #a9a4a4;
+}
+
+
+
+
+.footer-font{
+	font-size: 15px;
+	color: #282828;
+	text-decoration: none;
+}
+
 
 </style>
 </head>
@@ -482,7 +526,28 @@ textarea{
 			</div>
 		</div>
 	</div>
-	<div id="footer"></div>
+	<div id="footer">
+		<div id=footer-top>
+			<span class="policy both"><a class="footer-font" href="#">개인정보취급방침</a></span>
+			<span class="policy right"><a class="footer-font" href="#">학원소개</a></span>
+			<span class="policy right"><a class="footer-font" href="#">수강안내</a></span>
+			<span class="policy right"><a class="footer-font" href="#">면허시험안내</a></span>
+			<span class="policy right"><a class="footer-font" href="#">도로주행시험코스</a></span>
+			<span class="policy right"><a class="footer-font" href="#">온라인문의</a></span>
+			<span class="policy right"><a class="footer-font" href="#">고객센터</a></span>
+		</div>
+		<div id=footer-bottom>
+			<div id="bottom-left">
+				<div style="font-weight: 500; font-size: 28px; letter-spacing: -0.03em;"><a href="#">(주)김포자동차운전학원</a></div>
+				<div>학원코드: 13613 / 지정번호: 20-07호 / 사업자번호 : 614-86-02418 / 업종 : 교육서비스업(운전학원) / 대표 : 홍성우</div>
+				<div>경기도 김포시 김포대로 1682 (양촌읍 석모리 17-2, 모아패션아울렛앞) / Tel. 1833-2122</div>
+				<div>Copyright 2022 김포자동자운전전문학원 | All Rights Reserved</div>
+			</div>
+			<div id="bottom-right">
+				<img src="../resources/qr_gcar.gif" width="81">
+			</div>
+		</div>
+	</div>
 
 </div>
 
